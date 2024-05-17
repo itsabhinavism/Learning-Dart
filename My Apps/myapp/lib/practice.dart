@@ -1,4 +1,4 @@
-/*import 'dart:io';
+import 'dart:io';
 
 void main() {
   print('welcome to dart!');
@@ -6,4 +6,3 @@ void main() {
   var name = stdin.readLineSync();
   print('Welcome $name');
 }
-*/
