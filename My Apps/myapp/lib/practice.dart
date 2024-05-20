@@ -28,4 +28,14 @@ class myClass {
     int sum = n1 + n2;
     return sum;
   }
+
+  var names = [];
+  names.add("Raman");
+  names.add("Ramanujan");
+  names.add("Ramiz");
+  names.add("Ross");
+
+  names[2] = "Rameez";
+
+  print("$names");
 }
