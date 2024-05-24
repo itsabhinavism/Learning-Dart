@@ -37,9 +37,10 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text('Home Page'),
         ),
-        body: Center(
+        body:Center(
           child: Container(
-            width: 100, height: 100, color: Colors.blue,
-        ),));
+            width: 300, height: 100, color: Colors.blue,
+            child : Center(child: Text ('This is Centre.', style : TextStyle(color: Color.fromARGB(255, 0, 255, 136)))),
+        )));
   }
 }
