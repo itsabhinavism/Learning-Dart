@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
       title: 'My Flutter App',
       theme: ThemeData(
         colorScheme:
-            ColorScheme.fromSeed(seedColor: Colors.redAccent),
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 226, 166, 166)),
         useMaterial3: true,
       ),
+      home: const MyHomePage(title: 'Hsome Page'),
     );
   }
 }
@@ -36,14 +37,14 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text('Home Page'),
         ),
-        body: ElevatedButton(
-          child: Text("Elevated Button nigga!"),
-          onPressed: () {
-            print("Button Pressed!");
-          },
-          onLongPress: () {
-            print("Long Pressed..");
-          },
-        ));
+        body: Center(
+            child: Container(
+          width: 300,
+          height: 100,
+          color: Colors.blue,
+          child: Center(
+              child: Text('This is Center.',
+                  style: TextStyle(color: Color.fromARGB(255, 0, 255, 136)))),
+        )));
   }
 }
