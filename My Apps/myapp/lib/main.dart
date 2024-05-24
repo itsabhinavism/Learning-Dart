@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 226, 166, 166)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Home Page'),
+      home: const MyHomePage(title: 'Hsome Page'),
     );
   }
 }
@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body:Center(
           child: Container(
             width: 300, height: 100, color: Colors.blue,
-            child : Center(child: Text ('This is Centre.', style : TextStyle(color: Color.fromARGB(255, 0, 255, 136)))),
+            child : Center(child: Text ('This is Center.', style : TextStyle(color: Color.fromARGB(255, 0, 255, 136)))),
         )));
   }
 }
