@@ -36,14 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text('Home Page'),
         ),
-        body: ElevatedButton(
-          child: Text("Elevated Button nigga!"),
-          onPressed: () {
-            print("Button Pressed!");
-          },
-          onLongPress: () {
-            print("Long Pressed..");
-          },
-        ));
+       );
   }
 }
