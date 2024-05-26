@@ -33,24 +33,16 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Home Page'),
-          backgroundColor: const Color.fromARGB(255, 191, 154, 255),
-        ),
-        body: Center(
-            child: Container(
-          width: 300,
-          height: 100,
-          color: Colors.blue,
-          child: Center(
-              child: Text('This is Center.',
-                  style: TextStyle(color: Color.fromARGB(255, 0, 255, 136))),
-
-                  
-                  
-                  
-                  
-                  ),
-        )));
+      appBar: AppBar(
+        title: Text('Home Page'),
+        backgroundColor: const Color.fromARGB(255, 191, 154, 255),
+      ),
+      body: Center( 
+      child: ElevatedButton(
+          child: Text("dd"),
+          onPressed: () {
+            print("pressed!");
+          })),
+    );
   }
 }
