@@ -37,20 +37,39 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Home Page'),
           backgroundColor: const Color.fromARGB(255, 191, 154, 255),
         ),
-        body: Center(
-            child: Container(
-          width: 300,
-          height: 100,
-          color: Colors.blue,
-          child: Center(
-              child: Text('This is Center.',
-                  style: TextStyle(color: Color.fromARGB(255, 0, 255, 136))),
-
-                  
-                  
-                  
-                  
-                  ),
-        )));
+        body: Container(
+          width: 600,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(onPressed: () {}, child: Text("A")),
+              Text(
+                'for',
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                'Apple',
+                style: TextStyle(fontSize: 20),
+              ),
+              ElevatedButton(onPressed: () {}, child: Text("B")),
+              Text(
+                'for',
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                'Ball',
+                style: TextStyle(fontSize: 20),
+              ),
+              ElevatedButton(onPressed: () {}, child: Text("C")),
+              Text(
+                'for',
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                'Cat',
+                style: TextStyle(fontSize: 20)),
+            ],
+          ),
+        ));
   }
 }
