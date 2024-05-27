@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,14 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Container(
           width: 1000,
-          height: 900,
+          height: 1000,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ElevatedButton(onPressed: () {}, child: Text("A")),
                   Text(
@@ -59,32 +61,39 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-              ElevatedButton(onPressed: () {}, child: Text("B")),
-              Text(
-                'for',
-                style: TextStyle(fontSize: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ElevatedButton(onPressed: () {}, child: Text("B")),
+                  Text(
+                    'for',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Text(
+                    'Ball',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
               ),
-              Text(
-                'Ball',
-                style: TextStyle(fontSize: 20),
-              ),
-              
-             
               ElevatedButton(onPressed: () {}, child: Text("C")),
               Text(
                 'for',
                 style: TextStyle(fontSize: 20),
               ),
               Text('Cat', style: TextStyle(fontSize: 20)),
-              ElevatedButton(onPressed: () {}, child: Text("D")),
-              Text(
-                'for',
-                style: TextStyle(fontSize: 20),
-              ), Text(
-                'Doll',
-                style: TextStyle(fontSize: 20),
-              ),
-            ],
+              
+                  ElevatedButton(onPressed: () {}, child: Text("D")),
+                  Text(
+                    'for',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Text(
+                    'Doll',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              
           ),
         ));
   }
