@@ -39,62 +39,21 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Home Page'),
           backgroundColor: const Color.fromARGB(255, 191, 154, 255),
         ),
-        body: Container(
-          width: 10000,
-          height: 10000,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  ElevatedButton(onPressed: () {}, child: Text("A")),
-                  Text(
-                    'for',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    'Apple',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ElevatedButton(onPressed: () {}, child: Text("B")),
-                  Text(
-                    'for',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    'Ball',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ),
-              ElevatedButton(onPressed: () {}, child: Text("C")),
-              Text(
-                'for',
-                style: TextStyle(fontSize: 20),
-              ),
-              Text('Cat', style: TextStyle(fontSize: 20)),
+        body: Center(
+          child : InkWell(
+            onTap: () {
+              print("Tapped on container.");},
+            onLongPress: () {
+              print("Long tapped on container.");},
+              onDoubleTap: () {
+                print("Double tapped on container.");},
               
-                  ElevatedButton(onPressed: () {}, child: Text("D")),
-                  Text(
-                    'for',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    'Doll',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              
-          ),
-        ));
-  }
-}
+          child: Container(
+            width :200,
+            height : 200,color: Colors.amber,
+            child: InkWell (
+              onTap : () {
+                print("Text widget tapped.");},
+
+                child : Text("Click Here", style : TextStyle (fontSize : 21,  fontWeight : FontWeight.w800),
+                ))),),),);}}
