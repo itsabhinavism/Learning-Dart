@@ -40,15 +40,15 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: const Color.fromARGB(255, 191, 154, 255),
         ),
         body: Container(
-          width: 1000,
-          height: 1000,
+          width: 10000,
+          height: 10000,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ElevatedButton(onPressed: () {}, child: Text("A")),
                   Text(
