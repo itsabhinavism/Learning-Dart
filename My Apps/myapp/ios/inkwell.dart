@@ -35,25 +35,43 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Home Page'),
-          backgroundColor: const Color.fromARGB(255, 191, 154, 255),
-        ),
-        body: Center(
-          child : InkWell(
-            onTap: () {
-              print("Tapped on container.");},
-            onLongPress: () {
-              print("Long tapped on container.");},
-              onDoubleTap: () {
-                print("Double tapped on container.");},
-              
+      appBar: AppBar(
+        title: Text('Home Page'),
+        backgroundColor: const Color.fromARGB(255, 191, 154, 255),
+      ),
+      body: Center(
+        child: InkWell(
+          onTap: () {
+                  print("Tapped on container.");
+                },
+                onLongPress: () {
+                  print("Long tapped on container.");
+                },
+                onDoubleTap: () {
+                  print("Double tapped on container.");
+                },
           child: Container(
-            width :200,
-            height : 200,color: Colors.amber,
-            child: InkWell (
-              onTap : () {
-                print("Text widget tapped.");},
-
-                child : Text("Click Here", style : TextStyle (fontSize : 21,  fontWeight : FontWeight.w800),
-                ))),),),);}}
+              width: 300,
+              height: 200,
+              color: Color.fromARGB(255, 167, 255, 27),
+              child: Center( child:InkWell(
+                onTap: () {
+                  print("Tapped on text widget.");
+                },
+                onLongPress: () {
+                  print("Long tapped on text widget.");
+                },
+                onDoubleTap: () {
+                  print("Double tapped on text widget.");
+                },
+                child:  
+                  Text("1 Tap = 1 Blessing",
+                      style:
+                          TextStyle(fontSize: 21, fontWeight: FontWeight.w800)),
+                
+              )),),
+        ),
+      ),
+    );
+  }
+}

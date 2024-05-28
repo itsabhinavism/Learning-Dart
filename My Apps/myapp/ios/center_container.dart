@@ -43,14 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
           height: 100,
           color: Colors.blue,
           child: Center(
-              child: Text('This is Center.',
-                  style: TextStyle(color: Color.fromARGB(255, 0, 255, 136))),
-
-                  
-                  
-                  
-                  
-                  ),
+            child: Text('This is Center.',
+                style: TextStyle(color: Color.fromARGB(255, 0, 255, 136))),
+          ),
         )));
   }
 }

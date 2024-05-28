@@ -41,25 +41,35 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: InkWell(
+          onTap: () {
+                  print("Tapped on container.");
+                },
+                onLongPress: () {
+                  print("Long tapped on container.");
+                },
+                onDoubleTap: () {
+                  print("Double tapped on container.");
+                },
           child: Container(
-              width: 200,
+              width: 300,
               height: 200,
-              color: Colors.amber,
-              child: InkWell(
-                  onTap: () {
-                    print("Text widget tapped.");
-                  },
-                  onLongPress: () {
-                    print("Long tapped on container.");
-                  },
-                  onDoubleTap: () {
-                    print("Double tapped on container.");
-                  },
-                  
-                  child: Text(
-                    "Click Here",
-                    style: TextStyle(fontSize: 21, fontWeight: FontWeight.w800),
-                  ))),
+              color: Color.fromARGB(255, 167, 255, 27),
+              child: Center( child:InkWell(
+                onTap: () {
+                  print("Tapped on text widget.");
+                },
+                onLongPress: () {
+                  print("Long tapped on text widget.");
+                },
+                onDoubleTap: () {
+                  print("Double tapped on text widget.");
+                },
+                child:  
+                  Text("1 Tap = 1 Blessing",
+                      style:
+                          TextStyle(fontSize: 21, fontWeight: FontWeight.w800)),
+                
+              )),),
         ),
       ),
     );
