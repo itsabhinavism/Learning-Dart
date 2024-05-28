@@ -42,34 +42,33 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: InkWell(
           onTap: () {
-                  print("Tapped on container.");
-                },
-                onLongPress: () {
-                  print("Long tapped on container.");
-                },
-                onDoubleTap: () {
-                  print("Double tapped on container.");
-                },
+            print("Tapped on container.");
+          },
+          onLongPress: () {
+            print("Long tapped on container.");
+          },
+          onDoubleTap: () {
+            print("Double tapped on container.");
+          },
           child: Container(
-              width: 300,
-              height: 200,
-              color: Color.fromARGB(255, 167, 255, 27),
-              child: Center( child:InkWell(
-                onTap: () {
-                  print("Tapped on text widget.");
-                },
-                onLongPress: () {
-                  print("Long tapped on text widget.");
-                },
-                onDoubleTap: () {
-                  print("Double tapped on text widget.");
-                },
-                child:  
-                  Text("1 Tap = 1 Blessing",
-                      style:
-                          TextStyle(fontSize: 21, fontWeight: FontWeight.w800)),
-                
-              )),),
+            width: 300,
+            height: 200,
+            color: Color.fromARGB(255, 255, 146, 63),
+            child: Center(
+                child: InkWell(
+              onTap: () {
+                print("Tapped on text widget.");
+              },
+              onLongPress: () {
+                print("Long tapped on text widget.");
+              },
+              onDoubleTap: () {
+                print("Double tapped on text widget.");
+              },
+              child: Text("Guess the tap?",
+                  style: TextStyle(fontSize: 21, fontWeight: FontWeight.w800,color: Color.fromARGB(255, 255, 255, 255))),
+            )),
+          ),
         ),
       ),
     );
