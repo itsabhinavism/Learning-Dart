@@ -39,38 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Home Page'),
         backgroundColor: const Color.fromARGB(255, 191, 154, 255),
       ),
-      body: Center(
-        child: InkWell(
-          onTap: () {
-            print("Tapped on container.");
-          },
-          onLongPress: () {
-            print("Long tapped on container.");
-          },
-          onDoubleTap: () {
-            print("Double tapped on container.");
-          },
-          child: Container(
-            width: 300,
-            height: 200,
-            color: Color.fromARGB(255, 255, 146, 63),
-            child: Center(
-                child: InkWell(
-              onTap: () {
-                print("Tapped on text widget.");
-              },
-              onLongPress: () {
-                print("Long tapped on text widget.");
-              },
-              onDoubleTap: () {
-                print("Double tapped on text widget.");
-              },
-              child: Text("Guess the tap?",
-                  style: TextStyle(fontSize: 21, fontWeight: FontWeight.w800,color: Color.fromARGB(255, 255, 255, 255))),
-            )),
-          ),
-        ),
+      body: Padding (padding: constEdgeInsets.all(8.0),
+      child : SingleChildScrollView (
+child : Column (children : [Container(margin : EdgeInsets.only("Hooray!!"),),height : 180cm, color: Colors.orange],),
+
+      ),
       ),
     );
   }
 }
+
+
+Container(margin : EdgeInsets.only("Hooray!!"),),height : 180cm, color: Colors.orange],),
