@@ -41,77 +41,204 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(3.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom: 11),
+                padding: const EdgeInsets.only(bottom: 10),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
                       Container(
                           margin: EdgeInsets.only(bottom: 11),
-                          height: 100,
-                          width: 100,
+                          height: 160,
+                          width: 220,
                           color: Color.fromARGB(255, 255, 0, 0)),
                       Container(
                           margin: EdgeInsets.only(bottom: 11),
-                          height: 120,
-                          width: 140,
-                          color: Color.fromARGB(255, 242, 255, 0)),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 255, 166, 0)),
                       Container(
                           margin: EdgeInsets.only(bottom: 11),
-                          height: 140,
-                          width: 180,
-                          color: Color.fromARGB(255, 98, 255, 0)),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 255, 238, 0)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 145, 255, 0)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 0, 255, 115)),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Column(children: [
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      height: 150,
+                      width: 400,
+                      color: Color.fromARGB(255, 0, 255, 234),
+                      child: Center(
+                        child: Text(
+                          'Gallery-Prototype',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ]),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 0, 162, 255)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 0, 17, 255)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 98, 0, 255)),
                       Container(
                           margin: EdgeInsets.only(bottom: 11),
                           height: 160,
                           width: 220,
                           color: Color.fromARGB(255, 0, 225, 255)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 217, 0, 255)),
                     ],
                   ),
                 ),
               ),
-
-Padding(
-                padding: const EdgeInsets.only(bottom: 11),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 0),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Column(
                     children: [
                       Container(
+                          margin: EdgeInsets.only(bottom: 10),
+                          height: 150,
+                          width: 400,
+                          color: Color.fromARGB(255, 255, 0, 157)),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
                           margin: EdgeInsets.only(bottom: 11),
-                          height: 100,
-                          width: 100,
+                          height: 160,
+                          width: 220,
                           color: Color.fromARGB(255, 255, 0, 0)),
                       Container(
                           margin: EdgeInsets.only(bottom: 11),
-                          height: 120,
-                          width: 140,
+                          height: 160,
+                          width: 220,
                           color: Color.fromARGB(255, 242, 255, 0)),
                       Container(
                           margin: EdgeInsets.only(bottom: 11),
-                          height: 140,
-                          width: 180,
+                          height: 160,
+                          width: 220,
                           color: Color.fromARGB(255, 98, 255, 0)),
                       Container(
                           margin: EdgeInsets.only(bottom: 11),
                           height: 160,
                           width: 220,
                           color: Color.fromARGB(255, 0, 225, 255)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 217, 0, 255)),
                     ],
                   ),
                 ),
               ),
-
-
-
+              Padding(
+                padding: const EdgeInsets.only(bottom: 0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    children: [
+                      Container(
+                          margin: EdgeInsets.only(bottom: 10),
+                          height: 150,
+                          width: 400,
+                          color: Color.fromARGB(255, 255, 0, 0)),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 255, 0, 0)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 242, 255, 0)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 98, 255, 0)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 0, 225, 255)),
+                      Container(
+                          margin: EdgeInsets.only(bottom: 11),
+                          height: 160,
+                          width: 220,
+                          color: Color.fromARGB(255, 217, 0, 255)),
+                    ],
+                  ),
+                ),
+              ),
             ],
-
-            
           ),
         ),
       )),
