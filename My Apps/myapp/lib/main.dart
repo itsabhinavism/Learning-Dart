@@ -36,13 +36,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
-        backgroundColor: const Color.fromARGB(255, 191, 154, 255),
+        title: Text('Home Page',style : TextStyle(color:Colors.white)),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
-      body: Padding(
+      body: Center(
+          child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
           child: Column(
             children: [
               InkWell(
@@ -157,6 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: 340,
                     color: Color.fromARGB(255, 102, 0, 255)),
               ),
+
               InkWell(
                 onTap: () {
                   print("Tapped on Cyan-Green container.");
@@ -168,15 +169,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Cyan-Green container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11),
+                    margin: EdgeInsets.only(bottom: 11), 
                     height: 240,
                     width: 380,
                     color: Color.fromARGB(255, 138, 255, 206)),
               ),
             ],
           ),
-        ),),
-      )
+        ),
+      )),
     );
   }
 }
