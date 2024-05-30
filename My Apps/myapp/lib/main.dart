@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Text(
                           'Gallery',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: Color.fromARGB(255, 255, 255, 255),
                             fontSize: 20,
                           ),
                         ),
