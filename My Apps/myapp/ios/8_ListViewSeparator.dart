@@ -54,8 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
               itemCount: arrNames.length,
               separatorBuilder: (context, index) {
                 return Divider(
-                  height: 300,
-                  thickness: 5,color:Colors.red,
+                  height: 20,
+                  thickness: 10,
                 );
               }),
         ),
