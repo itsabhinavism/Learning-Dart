@@ -1,4 +1,3 @@
-
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
@@ -36,7 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var arrNames = ["Abhinav", "Abhishek ", "Aditya", "Aman", "Ashish"];
-    int divisor = 2; // Define your divisor here
 
     return Scaffold(
       appBar: AppBar(
@@ -44,78 +42,65 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
       body: ListView.separated(
-        itemBuilder: (context, index) {
-          if (index % divisor == 0) {
+          itemBuilder: (context, index) {
             return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                children: _getRowChildren(arrNames, index),
-              ),
+              child:Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        arrNames[index],
+                        style: TextStyle(fontSize: 25),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Text(
+                          arrNames[index],
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(2),
+                  child: Text(
+                    arrNames[index],
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        arrNames[index],
+                        style: TextStyle(fontSize: 25),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Text(
+                          arrNames[index],
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+              ),  );
+          },
+          itemCount: arrNames.length,
+          separatorBuilder: (context, index) {
+            return Divider(
+              height: 300,
+              thickness: 5,
+              color: const Color.fromARGB(255, 0, 0, 0),
             );
-          } else {
-            return Row(
-              children: _getRowChildren(arrNames, index),
-            );
-          }
-        },
-        itemCount: arrNames.length,
-        separatorBuilder: (context, index) {
-          return Divider(
-            height: 300,
-            thickness: 5,
-            color: const Color.fromARGB(255, 0, 0, 0),
-          );
-        },
-      ),
+          }),
     );
   }
-
-  List<Widget> _getRowChildren(List<String> arrNames, int index) {
-    return [
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Text(
-              arrNames[index],
-              style: TextStyle(fontSize: 25),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(2),
-              child: Text(
-                arrNames[index],
-                style: TextStyle(fontSize: 25),
-              ),
-            )
-          ],
-        ),
-      ),
-      Padding(
-        padding: const EdgeInsets.all(2),
-        child: Text(
-          arrNames[index],
-          style: TextStyle(fontSize: 25),
-        ),
-      ),
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Text(
-              arrNames[index],
-              style: TextStyle(fontSize: 25),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(2),
-              child: Text(
-                arrNames[index],
-                style: TextStyle(fontSize: 25),
-              ),
-            )
-          ],
-        ),
-      ),
-    ];
-  }
 }
-
