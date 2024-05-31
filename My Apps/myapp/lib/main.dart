@@ -39,27 +39,66 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
-      body: 
-        Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: ListView.separated(
-              itemBuilder: (context, index) {
-                return Center(child:Text(
-                  arrNames[index],
-                  style: TextStyle(fontSize: 25),
-                ),);
-              },
-              itemCount: arrNames.length,
-              separatorBuilder: (context, index) {
-                return Divider(
-                  height: 300,
-                  thickness: 5,color:Colors.red,
-                );
-              }),
-        ),
-      
-    );
+      body: Center(child:ListView.separated(
+          itemBuilder: (context, index) {
+            return Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        arrNames[index],
+                        style: TextStyle(fontSize: 25),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Text(
+                          arrNames[index],
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(2),
+                  child: Text(
+                    arrNames[index],
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        arrNames[index],
+                        style: TextStyle(fontSize: 25),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Text(
+                          arrNames[index],
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            );
+          },
+          itemCount: arrNames.length,
+          separatorBuilder: (context, index) {
+            return Divider(
+              height: 300,
+              thickness: 5,
+              color: const Color.fromARGB(255, 0, 0, 0),
+            );
+          }),
+    ),);
   }
 }

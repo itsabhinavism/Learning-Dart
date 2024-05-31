@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
               separatorBuilder: (context, index) {
                 return Divider(
                   height: 20,
-                  thickness: 10,
+                  thickness: 5,color:Colors.red,
                 );
               }),
         ),
