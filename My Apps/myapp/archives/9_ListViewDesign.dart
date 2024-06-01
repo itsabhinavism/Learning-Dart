@@ -41,54 +41,57 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Home Page', style: TextStyle(color: Colors.white)),
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
-      body: Center(child:ListView.separated(
+      body: ListView.separated(
           itemBuilder: (context, index) {
-            return Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        arrNames[index],
-                        style: TextStyle(fontSize: 25),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: Text(
+            return SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
                           arrNames[index],
                           style: TextStyle(fontSize: 25),
                         ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.all(2),
+                          child: Text(
+                            arrNames[index],
+                            style: TextStyle(fontSize: 25),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(2),
-                  child: Text(
-                    arrNames[index],
-                    style: TextStyle(fontSize: 25),
+                  Padding(
+                    padding: const EdgeInsets.all(2),
+                    child: Text(
+                      arrNames[index],
+                      style: TextStyle(fontSize: 25),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        arrNames[index],
-                        style: TextStyle(fontSize: 25),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: Text(
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
                           arrNames[index],
                           style: TextStyle(fontSize: 25),
                         ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.all(2),
+                          child: Text(
+                            arrNames[index],
+                            style: TextStyle(fontSize: 25),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             );
           },
           itemCount: arrNames.length,
@@ -99,6 +102,6 @@ class _MyHomePageState extends State<MyHomePage> {
               color: const Color.fromARGB(255, 0, 0, 0),
             );
           }),
-    ),);
+    );
   }
 }
