@@ -39,18 +39,17 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Home Page', style: TextStyle(color: Colors.white)),
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
-
-      // Image.asset('assets/images/Flutter.png'),
       body: Container(
         width: double.infinity,
         height: double.infinity,
         child: Center(
           child: Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(image: DecorationImage(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              image: DecorationImage(
                 image: AssetImage('assets/images/Flutter.png'),
-                fit: BoxFit.cover),
+              ),
               color: Color.fromARGB(255, 38, 38, 38),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(21),
@@ -60,8 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
               boxShadow: [
                 BoxShadow(blurRadius: 21, color: Colors.green, spreadRadius: 7)
               ],
-             
-            ), 
+            ),
           ),
         ),
       ),
