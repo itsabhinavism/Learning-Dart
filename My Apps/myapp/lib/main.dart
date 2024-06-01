@@ -35,26 +35,36 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Home Page', style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      appBar: AppBar(
+        title: Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      ),
+
+      // Image.asset('assets/images/Flutter.png'),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Center(
+          child: Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(image: DecorationImage(
+                image: AssetImage('assets/images/Flutter.png'),
+                fit: BoxFit.cover),
+              color: Color.fromARGB(255, 38, 38, 38),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(21),
+                  bottomRight: Radius.circular(21)),
+              border: Border.all(
+                  width: 2, color: const Color.fromARGB(255, 255, 255, 255)),
+              boxShadow: [
+                BoxShadow(blurRadius: 21, color: Colors.green, spreadRadius: 7)
+              ],
+             
+            ), 
+          ),
         ),
-        body: Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: Center(
-                child: Container(
-                    width: 150,
-                    height: 150,
-                    decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.only(topLeft:Radius.circular(21),bottomRight:Radius.circular(21)),
-                        border: Border.all(width: 5, color: Colors.green),
-                        boxShadow: [
-                          BoxShadow(
-                              blurRadius: 21,
-                              color: Colors.green,
-                              spreadRadius: 7)
-                        ])))));
+      ),
+    );
   }
 }
