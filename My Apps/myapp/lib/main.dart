@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My Flutter App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+       primarySwatch: Colors.purple,
       ),
       home: const MyHomePage(title: 'Home Page'),
     );
@@ -34,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrNames = ["Abhissnav", "Abhishek ", "Aditya", "Aman", "Ashish"];
+    var arrNames = ["Abhinav", "Abhishek ", "Aditya", "Aman", "Ashish"];
 
     return Scaffold(
       appBar: AppBar(
@@ -45,53 +44,54 @@ class _MyHomePageState extends State<MyHomePage> {
           itemBuilder: (context, index) {
             return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child:Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        arrNames[index],
-                        style: TextStyle(fontSize: 25),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: Text(
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
                           arrNames[index],
                           style: TextStyle(fontSize: 25),
                         ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.all(2),
+                          child: Text(
+                            arrNames[index],
+                            style: TextStyle(fontSize: 25),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(2),
-                  child: Text(
-                    arrNames[index],
-                    style: TextStyle(fontSize: 25),
+                  Padding(
+                    padding: const EdgeInsets.all(2),
+                    child: Text(
+                      arrNames[index],
+                      style: TextStyle(fontSize: 25),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        arrNames[index],
-                        style: TextStyle(fontSize: 25),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: Text(
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
                           arrNames[index],
                           style: TextStyle(fontSize: 25),
                         ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.all(2),
+                          child: Text(
+                            arrNames[index],
+                            style: TextStyle(fontSize: 25),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-              ],
-              ),  );
+                ],
+              ),
+            );
           },
           itemCount: arrNames.length,
           separatorBuilder: (context, index) {
