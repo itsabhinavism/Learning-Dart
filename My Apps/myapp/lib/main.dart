@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My Flutter App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       primarySwatch: Colors.purple,
+        primarySwatch: Colors.purple,
       ),
       home: const MyHomePage(title: 'Home Page'),
     );
@@ -33,74 +34,27 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrNames = ["Abhinav", "Abhishek ", "Aditya", "Aman", "Ashish"];
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
-      ),
-      body: ListView.separated(
-          itemBuilder: (context, index) {
-            return SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        Text(
-                          arrNames[index],
-                          style: TextStyle(fontSize: 25),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(2),
-                          child: Text(
-                            arrNames[index],
-                            style: TextStyle(fontSize: 25),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(2),
-                    child: Text(
-                      arrNames[index],
-                      style: TextStyle(fontSize: 25),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        Text(
-                          arrNames[index],
-                          style: TextStyle(fontSize: 25),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(2),
-                          child: Text(
-                            arrNames[index],
-                            style: TextStyle(fontSize: 25),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            );
-          },
-          itemCount: arrNames.length,
-          separatorBuilder: (context, index) {
-            return Divider(
-              height: 300,
-              thickness: 5,
-              color: const Color.fromARGB(255, 0, 0, 0),
-            );
-          }),
-    );
+        appBar: AppBar(
+          title: Text('Home Page', style: TextStyle(color: Colors.white)),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        ),
+        body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            child: Center(
+                child: Container(
+                    width: 150,
+                    height: 150,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.only(topLeft:Radius.circular(21),bottomRight:Radius.circular(21)),
+                        border: Border.all(width: 5, color: Colors.green),
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 21,
+                              color: Colors.green,
+                              spreadRadius: 7)
+                        ])))));
   }
 }
