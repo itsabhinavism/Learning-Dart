@@ -40,11 +40,36 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
       body: Align(
-    alignment: Alignment.bottomCenter,child: Row(children: [ 
-Expanded(flex:2, child: Container(height:90,color:Colors.blue),),
-Expanded(flex:2,child: Container(height:90,color: Colors.orange),),
-Expanded(flex:2, child: Container(height:90,color:Colors.blueGrey),),
-Expanded(flex:2, child: Container(height:90,color: Colors.green),),
-      ],),), );
+        alignment: Alignment.bottomCenter,
+        child: Row(
+          children: [
+            Expanded(
+              flex: 2,
+              child: Container(
+                height: 90,
+                color: Colors.blue,
+                child: Image.asset(
+                  'assets/images/menu.png', width: 50, // custom width
+                  height: 50, // custom height
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(height: 90, color: Colors.orange),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(height: 90, color: Colors.blueGrey),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(height: 90, color: Colors.green),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
