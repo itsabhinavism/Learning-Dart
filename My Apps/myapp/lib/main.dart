@@ -46,49 +46,51 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               flex: 2,
               child: Container(
-                height: 85,
+                height: 50,
                 color: const Color.fromARGB(255, 0, 0, 0),
                 child: Image.asset(
-                  'assets/images/menu.png', width: 5, // custom width
-                  height: 5, // custom height
-                  fit: BoxFit.cover,
+                  'assets/images/menu.png',
+                  width: 5,
+                  height: 5,
                 ),
               ),
             ),
             Expanded(
               flex: 2,
               child: Container(
-                height: 85,
+                height: 50,
                 color: const Color.fromARGB(255, 0, 0, 0),
                 child: Image.asset(
-                  'assets/images/search.png', width: 5, // custom width
-                  height: 5, // custom height
-                  fit: BoxFit.cover,
+                  'assets/images/search.png',
+                  width: 5,
+                  height: 5,
                 ),
               ),
             ),
             Expanded(
               flex: 2,
               child: Container(
-                height: 85,
+                height: 50,
                 color: const Color.fromARGB(255, 0, 0, 0),
-                child: Image.asset(
-                  'assets/images/add.png', width: 5, // custom width
-                  height: 5, // custom height
-                  fit: BoxFit.cover,
+                child: Container(
+                  width: 1,
+                  height: 1,
+                  child: Image.asset(
+                    'assets/images/add.png',
+                  ),
                 ),
               ),
             ),
             Expanded(
               flex: 2,
               child: Container(
-                height: 85,
-                color: const Color.fromARGB(255, 0, 0, 0),
-                child: Image.asset('assets/images/setting.png',
-                    width: 5, // custom width
-                    height: 5 // custom height
-
-                    ),
+                height: 50,
+                color: Color.fromARGB(255, 0, 0, 0),
+                child: Image.asset(
+                  'assets/images/setting.png',
+                  width: 5,
+                  height: 5,
+                ),
               ),
             ),
           ],
