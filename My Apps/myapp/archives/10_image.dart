@@ -40,31 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
 
-      // Image.asset('assets/images/Flutter.png'),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: Center(
-          child: Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(image: DecorationImage(
-                image: AssetImage('assets/images/Flutter.png'),
-                ),
-              color: Color.fromARGB(255, 38, 38, 38),
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(21),
-                  bottomRight: Radius.circular(21)),
-              border: Border.all(
-                  width: 2, color: const Color.fromARGB(255, 255, 255, 255)),
-              boxShadow: [
-                BoxShadow(blurRadius: 21, color: Colors.green, spreadRadius: 7)
-              ],
-             
-            ), 
-          ),
-        ),
-      ),
+        // Image.asset('assets/images/Flutter.png'),
+      body: Center(child: Container(
+        width: 150,
+        height: 150,
+        child: Image.asset('assets/images/Flutter.png'),),),
+    
+      
     );
   }
 }
