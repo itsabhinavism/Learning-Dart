@@ -46,26 +46,50 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               flex: 2,
               child: Container(
-                height: 90,
-                color: Colors.blue,
+                height: 85,
+                color: const Color.fromARGB(255, 0, 0, 0),
                 child: Image.asset(
-                  'assets/images/menu.png', width: 50, // custom width
-                  height: 50, // custom height
+                  'assets/images/menu.png', width: 5, // custom width
+                  height: 5, // custom height
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             Expanded(
               flex: 2,
-              child: Container(height: 90, color: Colors.orange),
+              child: Container(
+                height: 85,
+                color: const Color.fromARGB(255, 0, 0, 0),
+                child: Image.asset(
+                  'assets/images/search.png', width: 5, // custom width
+                  height: 5, // custom height
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             Expanded(
               flex: 2,
-              child: Container(height: 90, color: Colors.blueGrey),
+              child: Container(
+                height: 85,
+                color: const Color.fromARGB(255, 0, 0, 0),
+                child: Image.asset(
+                  'assets/images/add.png', width: 5, // custom width
+                  height: 5, // custom height
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             Expanded(
               flex: 2,
-              child: Container(height: 90, color: Colors.green),
+              child: Container(
+                height: 85,
+                color: const Color.fromARGB(255, 0, 0, 0),
+                child: Image.asset('assets/images/setting.png',
+                    width: 5, // custom width
+                    height: 5 // custom height
+
+                    ),
+              ),
             ),
           ],
         ),
