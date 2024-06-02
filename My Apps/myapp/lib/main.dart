@@ -39,30 +39,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Home Page', style: TextStyle(color: Colors.white)),
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: Center(
-          child: Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/Flutter.png'),
-              ),
-              color: Color.fromARGB(255, 38, 38, 38),
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(21),
-                  bottomRight: Radius.circular(21)),
-              border: Border.all(
-                  width: 2, color: const Color.fromARGB(255, 255, 255, 255)),
-              boxShadow: [
-                BoxShadow(blurRadius: 21, color: Colors.green, spreadRadius: 7)
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+      body: Align(
+    alignment: Alignment.bottomCenter,child: Row(children: [ 
+Expanded(flex:2, child: Container(height:90,color:Colors.blue),),
+Expanded(flex:2,child: Container(height:90,color: Colors.orange),),
+Expanded(flex:2, child: Container(height:90,color:Colors.blueGrey),),
+Expanded(flex:2, child: Container(height:90,color: Colors.green),),
+      ],),), );
   }
 }
