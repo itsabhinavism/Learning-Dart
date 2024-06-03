@@ -43,7 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
       'Ashish',
       'Abhinandan',
       'Shresth',
-      'Rudra'
+      'Rudra',
+      'Souptik',
     ];
 
     var arrJobs = [
@@ -56,22 +57,25 @@ class _MyHomePageState extends State<MyHomePage> {
       'Musician ',
       'Web Developer',
       'Android Developer',
+      'Gamer',
     ];
 
-    var arrPfp = ['assets/images/icons/user-regular.png',
-    'assets/images/icons/user-tie-solid.png',
-    'assets/images/icons/user-shield-solid.png',
-    'assets/images/icons/user-pen-solid.png',
-    'assets/images/icons/user-nurse-solid.png',
-    'assets/images/icons/user-ninja-solid.png',
-    'assets/images/icons/user-lock-solid.png',
-    'assets/images/icons/user-graduate-solid.png',
-    'assets/images/icons/user-gear-solid.png',
+    var arrPfp = [
+      'assets/images/icons/user-regular.png',
+      'assets/images/icons/user-tie-solid.png',
+      'assets/images/icons/user-shield-solid.png',
+      'assets/images/icons/user-pen-solid.png',
+      'assets/images/icons/user-nurse-solid.png',
+      'assets/images/icons/user-ninja-solid.png',
+      'assets/images/icons/user-lock-solid.png',
+      'assets/images/icons/user-graduate-solid.png',
+      'assets/images/icons/user-gear-solid.png',
+      'assets/images/icons/user-solid.png',
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title, style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: Text('Contact List', style: TextStyle(color: Colors.white)),
+        backgroundColor: Color.fromARGB(255, 168, 110, 255),
       ),
       body: Stack(
         children: [
@@ -80,8 +84,23 @@ class _MyHomePageState extends State<MyHomePage> {
             child: ListView.separated(
               itemBuilder: (context, index) {
                 return ListTile(
-                  leading: CircleAvatar(
-                    backgroundImage: AssetImage(arrPfp[index]),radius:30,
+                  leading: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('${index + 1}' '.''  '),
+                      CircleAvatar(
+                        child: Container(
+                          width: 20,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(arrPfp[index]),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   title: Text(arrNames[index]),
                   subtitle: Text(arrJobs[index]),
@@ -91,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
               itemCount: arrNames.length,
               separatorBuilder: (context, index) {
                 return Divider(
-                  height: 20,
+                  height: 40,
                   thickness: 2,
                 );
               },
@@ -114,12 +133,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Menu.");
                     },
                     child: Container(
-                      color: const Color.fromARGB(255, 0, 0, 0),
+                      color: Color.fromARGB(255, 180, 129, 255),
                       height: 45,
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/menu.png',
+                          'assets/images/icons/menu.png',color:Colors.black,
                           height: 45,
                         ),
                       ),
@@ -139,12 +158,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Search Bar.");
                     },
                     child: Container(
-                      color: const Color.fromARGB(255, 0, 0, 0),
+                      color: Color.fromARGB(255, 180, 129, 255),
                       height: 45,
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/search.png',
+                          'assets/images/icons/search.png',color:Colors.black,
                         ),
                       ),
                     ),
@@ -163,12 +182,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Favoirate Button.");
                     },
                     child: Container(
-                      color: const Color.fromARGB(255, 0, 0, 0),
+                      color: Color.fromARGB(255, 180, 129, 255),
                       height: 45,
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/fav.png',
+                          'assets/images/icons/fav.png',color:Colors.black,
                         ),
                       ),
                     ),
@@ -187,12 +206,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Settings.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: Color.fromARGB(255, 180, 129, 255),
                       height: 45,
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/setting.png',
+                          'assets/images/icons/setting.png',color:Colors.black,
                         ),
                       ),
                     ),
