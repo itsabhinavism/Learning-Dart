@@ -65,12 +65,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Menu.");
                     },
                     child: Container(
-                      height: 50,
                       color: const Color.fromARGB(255, 0, 0, 0),
-                      child: Image.asset(
-                        'assets/images/menu.png',
-                        width: 5,
-                        height: 5,
+                      height: 45,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Image.asset(
+                          'assets/images/menu.png',
+                      
+                          height: 45,
+                        ),
                       ),
                     ),
                   ),
@@ -88,34 +91,34 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Search Bar.");
                     },
                     child: Container(
-                      height: 50,
                       color: const Color.fromARGB(255, 0, 0, 0),
-                      child: Image.asset(
-                        'assets/images/search.png',
-                        width: 5,
-                        height: 5,
+                      height: 45,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Image.asset(
+                          'assets/images/search.png',
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Expanded(
                   flex: 2,
-                  child: Container(
-                    height: 50,
-                    color: const Color.fromARGB(255, 0, 0, 0),
-                    child: InkWell(
-                      onTap: () {
-                        print("Tapped on Add Button.");
-                      },
-                      onLongPress: () {
-                        print("Long tapped on Add Button.");
-                      },
-                      onDoubleTap: () {
-                        print("Double tapped on Add Button.");
-                      },
-                      child: Container(
-                        width: 1,
-                        height: 1,
+                  child: InkWell(
+                    onTap: () {
+                      print("Tapped on Add Button.");
+                    },
+                    onLongPress: () {
+                      print("Long tapped on Add Button.");
+                    },
+                    onDoubleTap: () {
+                      print("Double tapped on Add Button.");
+                    },
+                    child: Container(
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                      height: 45,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/add.png',
                         ),
@@ -125,23 +128,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Expanded(
                   flex: 2,
-                  child: Container(
-                    height: 50,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    child: InkWell(
-                      onTap: () {
-                        print("Tapped on Settings.");
-                      },
-                      onLongPress: () {
-                        print("Long tapped on Settings.");
-                      },
-                      onDoubleTap: () {
-                        print("Double tapped on Settings.");
-                      },
-                      child: Image.asset(
-                        'assets/images/setting.png',
-                        width: 5,
-                        height: 5,
+                  child: InkWell(
+                    onTap: () {
+                      print("Tapped on Settings.");
+                    },
+                    onLongPress: () {
+                      print("Long tapped on Settings.");
+                    },
+                    onDoubleTap: () {
+                      print("Double tapped on Settings.");
+                    },
+                    child: Container(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      height: 45,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Image.asset(
+                          'assets/images/setting.png',
+                        ),
                       ),
                     ),
                   ),

@@ -34,20 +34,53 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrNames = [
+      'Abhinav',
+      'Abhishek',
+      'Aditya',
+      'Aman',
+      'Abhay',
+      'Ashish',
+      'Abhinandan',
+      'Shresth',
+      'Rudra'
+    ];
+
+    var arrJobs = [
+      'Photographer',
+      'Engineer',
+      'Doctor',
+      'SalesMan',
+      'Graphic Designer',
+      'Programmer',
+      'Musician ',
+      'Web Developer',
+      'Android Developer',
+    ];
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title, style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
-      ),
-      body: Stack(
-        children: [
-          Center(
-            child: Container(
-              width: 300,
-              height: 100,
-              child: Image.asset('assets/images/Flutter.png'),
+        appBar: AppBar(
+          title: Text(widget.title, style: TextStyle(color: Colors.white)),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        ),
+        body: Stack (children :[ListView.separated(
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: Text('${index + 1}'),
+              title: Text(arrNames[index]),
+              subtitle: Text(arrJobs[index]),
+              trailing: Icon(Icons.add),
+            );
+          },
+          itemCount: arrNames.length,
+          separatorBuilder: (context, index) {
+            return Divider(
+              height: 20,
+              thickness: 1,
+            );
+          },
+
+          
             ),
-          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Row(
@@ -153,8 +186,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-        ],
-      ),
-    );
+        ],),);
   }
 }
