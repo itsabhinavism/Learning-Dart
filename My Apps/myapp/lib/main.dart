@@ -71,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 return ListTile(
                   leading: Text('${index + 1}'),
                   title: Text(arrNames[index]),
+                  
                   subtitle: Text(arrJobs[index]),
                   trailing: Icon(Icons.add),
                 );
@@ -141,13 +142,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   flex: 2,
                   child: InkWell(
                     onTap: () {
-                      print("Tapped on Add Button.");
+                      print("Tapped on Star Button.");
                     },
                     onLongPress: () {
-                      print("Long tapped on Add Button.");
+                      print("Long tapped on Star Button.");
                     },
                     onDoubleTap: () {
-                      print("Double tapped on Add Button.");
+                      print("Double tapped on Star Button.");
                     },
                     child: Container(
                       color: const Color.fromARGB(255, 0, 0, 0),
@@ -155,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/add.png',
+                          'assets/images/star-regular.svg',
                         ),
                       ),
                     ),
