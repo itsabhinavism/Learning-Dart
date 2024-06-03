@@ -57,6 +57,17 @@ class _MyHomePageState extends State<MyHomePage> {
       'Web Developer',
       'Android Developer',
     ];
+
+    var arrPfp = ['assets/images/icons/user-regular.png',
+    'assets/images/icons/user-tie-solid.png',
+    'assets/images/icons/user-shield-solid.png',
+    'assets/images/icons/user-pen-solid.png',
+    'assets/images/icons/user-nurse-solid.png',
+    'assets/images/icons/user-ninja-solid.png',
+    'assets/images/icons/user-lock-solid.png',
+    'assets/images/icons/user-graduate-solid.png',
+    'assets/images/icons/user-gear-solid.png',
+    ];
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: TextStyle(color: Colors.white)),
@@ -69,9 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
             child: ListView.separated(
               itemBuilder: (context, index) {
                 return ListTile(
-                  leading: Text('${index + 1}'),
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage(arrPfp[index]),radius:30,
+                  ),
                   title: Text(arrNames[index]),
-                  
                   subtitle: Text(arrJobs[index]),
                   trailing: Icon(Icons.add),
                 );
@@ -156,7 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/star_regular.png',
+                          'assets/images/icons/fav.png',
                         ),
                       ),
                     ),
