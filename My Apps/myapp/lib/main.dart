@@ -142,13 +142,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   flex: 2,
                   child: InkWell(
                     onTap: () {
-                      print("Tapped on Star Button.");
+                      print("Tapped on Favoirate Button.");
                     },
                     onLongPress: () {
-                      print("Long tapped on Star Button.");
+                      print("Long tapped on Favoirate Button.");
                     },
                     onDoubleTap: () {
-                      print("Double tapped on Star Button.");
+                      print("Double tapped on Favoirate Button.");
                     },
                     child: Container(
                       color: const Color.fromARGB(255, 0, 0, 0),
@@ -156,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/fav.png',
+                          'assets/images/icons/star_regular.png',
                         ),
                       ),
                     ),
