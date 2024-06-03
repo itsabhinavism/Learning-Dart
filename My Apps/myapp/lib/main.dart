@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/menu.png',color:Colors.black,
+                          'assets/images/icons/menu.png',color:Color.fromARGB(255, 56, 56, 56),
                           height: 45,
                         ),
                       ),
@@ -163,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/search.png',color:Colors.black,
+                          'assets/images/icons/search.png',color:Color.fromARGB(255, 56, 56, 56),
                         ),
                       ),
                     ),
@@ -187,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/fav.png',color:Colors.black,
+                          'assets/images/icons/fav.png',color:Color.fromARGB(255, 56, 56, 56),
                         ),
                       ),
                     ),
@@ -211,7 +211,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/setting.png',color:Colors.black,
+                          'assets/images/icons/setting.png',color:Color.fromARGB(255, 56, 56, 56),
                         ),
                       ),
                     ),
