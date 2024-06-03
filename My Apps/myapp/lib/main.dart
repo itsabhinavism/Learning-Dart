@@ -156,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/star-regular.svg',
+                          'assets/images/star_regular.svg',
                         ),
                       ),
                     ),
