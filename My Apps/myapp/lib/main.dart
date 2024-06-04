@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Contact List', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 168, 110, 255),
+        backgroundColor: Color.fromARGB(255, 180, 129, 255),
       ),
       body: Stack(
         children: [
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   leading: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('${index + 1}' '.''  '),
+                      Text('${index + 1}' '.' '  '),
                       CircleAvatar(
                         child: Container(
                           width: 20,
@@ -138,7 +138,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/menu.png',color:Color.fromARGB(255, 56, 56, 56),
+                          'assets/images/icons/menu.png',
+                          color: Color.fromARGB(255, 56, 56, 56),
                           height: 45,
                         ),
                       ),
@@ -163,7 +164,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/search.png',color:Color.fromARGB(255, 56, 56, 56),
+                          'assets/images/icons/search.png',
+                          color: Color.fromARGB(255, 56, 56, 56),
                         ),
                       ),
                     ),
@@ -187,7 +189,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/fav.png',color:Color.fromARGB(255, 56, 56, 56),
+                          'assets/images/icons/fav.png',
+                          color: Color.fromARGB(255, 56, 56, 56),
                         ),
                       ),
                     ),
@@ -211,7 +214,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'assets/images/icons/setting.png',color:Color.fromARGB(255, 56, 56, 56),
+                          'assets/images/icons/setting.png',
+                          color: Color.fromARGB(255, 56, 56, 56),
                         ),
                       ),
                     ),
