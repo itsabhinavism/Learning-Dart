@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Contact List', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 180, 129, 255),
+        backgroundColor: Color.fromARGB(255, 168, 110, 255),
       ),
       body: Stack(
         children: [
@@ -133,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Menu.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 180, 129, 255),
+                      color: Color.fromARGB(255, 168, 110, 255),
                       height: 45,
                       child: Padding(
                         padding: EdgeInsets.all(8),
@@ -159,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Search Bar.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 180, 129, 255),
+                      color: Color.fromARGB(255, 168, 110, 255),
                       height: 45,
                       child: Padding(
                         padding: EdgeInsets.all(8),
