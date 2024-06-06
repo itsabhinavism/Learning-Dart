@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             headlineSmall:
                 TextStyle(fontSize: 101, fontWeight: FontWeight.bold),
-            headlineMedium: TextStyle(color:Colors.red,
+            headlineMedium: TextStyle(
+                color: Colors.red,
                 fontSize: 51,
                 fontWeight: FontWeight.w500,
                 fontStyle: FontStyle.italic),
@@ -47,33 +48,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Home Page'),
         backgroundColor: Colors.orange,
       ),
-      body: Column(
-        children: [
-          Text(
-            "Hello",
-            style: Theme.of(context).textTheme.headlineSmall,
+      body: Center(
+        child: Card(
+          shadowColor: Colors.cyan,
+          elevation: 7,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Button",
+              style: TextStyle(fontSize: 30),
+            ),
           ),
-          Text(
-            "Hello",
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-          Text(
-            "Hello",
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall!
-                .copyWith(color: Colors.blue, fontStyle: FontStyle.italic),
-          ),
-          Text(
-            "Hello",
-            style: mText21(),
-          ),
-
-           Text(
-            "Hello",
-            style: mText11(textColor:Color.fromARGB(255, 33, 243, 142)),
-          ),
-        ],
+        ),
       ),
     );
   }
