@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'My Flutter App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.lightGreen,
       ),
       home: const MyHomePage(title: 'Home'),
     );
@@ -34,227 +34,112 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrNames = [
-      'Abhinav',
-      'Abhishek',
-      'Aditya',
-      'Aman',
-      'Abhay',
-      'Ashish',
-      'Abhinandan',
-      'Shresth',
-      'Rudra',
-      'Souptik',
-    ];
+    var phno = TextEditingController();
+    var pw = TextEditingController();
 
-    var arrJobs = [
-      'Photographer',
-      'Engineer',
-      'Doctor',
-      'SalesMan',
-      'Graphic Designer',
-      'Programmer',
-      'Musician ',
-      'Web Developer',
-      'Android Developer',
-      'Gamer',
-    ];
-
-    var arrPfp = [
-      'assets/images/icons/user-regular.png',
-      'assets/images/icons/user-tie-solid.png',
-      'assets/images/icons/user-shield-solid.png',
-      'assets/images/icons/user-pen-solid.png',
-      'assets/images/icons/user-nurse-solid.png',
-      'assets/images/icons/user-ninja-solid.png',
-      'assets/images/icons/user-lock-solid.png',
-      'assets/images/icons/user-graduate-solid.png',
-      'assets/images/icons/user-gear-solid.png',
-      'assets/images/icons/user-solid.png',
-    ];
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Contact List', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 168, 110, 255),
-      ),
-      body: Stack(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(bottom: 50), // Add this line
-            child: ListView.separated(
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text('${index + 1}' '.' '  '),
-                      CircleAvatar(
-                        child: Container(
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                              image: AssetImage(arrPfp[index]),
-                            ),
-                          ),
+        appBar: AppBar(
+          title: Text('Login Page', style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.lightGreen,
+        ),
+        body: Center(
+          child: Container(
+              width: 400,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextField(
+                    keyboardType: TextInputType.phone,
+                    controller: phno,
+                    decoration: InputDecoration(
+                      hintText: 'Enter Phone Number',
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide:
+                              BorderSide(color: Colors.lightGreen, width: 2)),
+
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Color.fromARGB(255, 103, 103, 103),
+                              width: 2)),
+
+                      //suffixText: "Phone number",
+
+                      suffixIcon: Container(
+                        height: 40,
+                        width: 50,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 15, right: 15),
+                          child: Image.asset(
+                              'assets/images/icons/eye-regular.png',
+                              color: Color.fromARGB(255, 103, 103, 103)),
                         ),
                       ),
-                    ],
-                  ),
-                  title: Text(arrNames[index]),
-                  subtitle: Text(arrJobs[index]),
-                  trailing: Icon(Icons.add),
-                );
-              },
-              itemCount: arrNames.length,
-              separatorBuilder: (context, index) {
-                return Divider(
-                  height: 40,
-                  thickness: 2,
-                );
-              },
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: InkWell(
-                    onTap: () {
-                      print("Tapped on Menu.");
-                    },
-                    onLongPress: () {
-                      print("Long tapped on Menu.");
-                    },
-                    onDoubleTap: () {
-                      print("Double tapped on Menu.");
-                    },
-                    child: Container(
-                      color: Color.fromARGB(255, 168, 110, 255),
-                      height: 55,
-                      child: Container(
-                        width: 30,
-                        height: 0,
-                        child: Card(
-                          shadowColor: const Color.fromARGB(255, 0, 0, 0),
-                          elevation: 8, margin: EdgeInsets.all(8.0),
-                          child: Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/images/icons/menu.png',
-                              color: Color.fromARGB(255, 56, 56, 56),
-                              height: 45,
-                            ),
-                          ),
+
+                      prefixIcon: Container(
+                        width: 50,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 15, right: 15),
+                          child: Image.asset(
+                              'assets/images/icons/phone-solid.png',
+                              color: Color.fromARGB(255, 103, 103, 103)),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: InkWell(
-                    onTap: () {
-                      print("Tapped on Search Bar.");
-                    },
-                    onLongPress: () {
-                      print("Long tapped on Search Bar.");
-                    },
-                    onDoubleTap: () {
-                      print("Double tapped on Search Bar.");
-                    },
-                    child: Container(
-                      color: Color.fromARGB(255, 168, 110, 255),
-                      height: 55,
-                      child: Container(
-                        width: 30,
-                        height: 0,
-                        child: Card(
-                          shadowColor: const Color.fromARGB(255, 0, 0, 0),
-                          elevation: 8, margin: EdgeInsets.all(8.0),
+                  Container(height: 13),
+                  TextField(
+                    controller: pw,
+                    obscureText: true,
+                    obscuringCharacter: '*',
+                    decoration: InputDecoration(
+                      hintText: "Enter Password",
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide:
+                              BorderSide(color: Colors.lightGreen, width: 2)),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Color.fromARGB(255, 103, 103, 103),
+                              width: 2)),
+                      disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Color.fromARGB(255, 103, 103, 103),
+                              width: 2)),
+                      prefixIcon: Container(
+                        width: 50,
                         child: Padding(
-                          padding: EdgeInsets.all(8),
+                          padding: EdgeInsets.only(left: 15, right: 15),
                           child: Image.asset(
-                            'assets/images/icons/search.png',
-                            color: Color.fromARGB(255, 56, 56, 56),
-                          ),
-                        ),
-                      ),),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: InkWell(
-                    onTap: () {
-                      print("Tapped on Favoirate Button.");
-                    },
-                    onLongPress: () {
-                      print("Long tapped on Favoirate Button.");
-                    },
-                    onDoubleTap: () {
-                      print("Double tapped on Favoirate Button.");
-                    },
-                    child: Container(
-                      color: Color.fromARGB(255, 168, 110, 255),
-                      height: 55,
-                     child: Container(
-                        width: 30,
-                        height: 0,
-                        child: Card(
-                          shadowColor: const Color.fromARGB(255, 0, 0, 0),
-                          elevation: 8, margin: EdgeInsets.all(8.0),
-                        child: Padding(
-                          padding: EdgeInsets.all(8),
-                          child: Image.asset(
-                            'assets/images/icons/fav.png',
-                            color: Color.fromARGB(255, 56, 56, 56),
-                          ),
-                        ),
-                      ),),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: InkWell(
-                    onTap: () {
-                      print("Tapped on Settings.");
-                    },
-                    onLongPress: () {
-                      print("Long tapped on Settings.");
-                    },
-                    onDoubleTap: () {
-                      print("Double tapped on Settings.");
-                    },
-                    child: Container(
-                      color: Color.fromARGB(255, 168, 110, 255),
-                      height: 55,
-                      child: Container(
-                        width: 30,
-                        height: 0,
-                        child: Card(
-                          shadowColor: const Color.fromARGB(255, 0, 0, 0),
-                          elevation: 8, margin: EdgeInsets.all(8.0),
-                        child: Padding(
-                          padding: EdgeInsets.all(8),
-                          child: Image.asset(
-                            'assets/images/icons/setting.png',
-                            color: Color.fromARGB(255, 56, 56, 56),
-                          ),
+                              'assets/images/icons/key-solid.png',
+                              color: Color.fromARGB(255, 103, 103, 103)),
                         ),
                       ),
-                    ),),
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
+                  Container(height: 15),
+                  ElevatedButton(
+                      onPressed: () {
+                        String uPhNo = phno.text.toString();
+                        String uPw = pw.text;
+
+                        print("Email: $uPhNo, Password: $uPw");
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyHomePage(title: 'Home')),
+                        );
+                      },
+                      child: Text("Login",
+                          style: TextStyle(color: Colors.lightGreen))),
+
+                          Container(height:10),
+                          Container(height:1,width:1, child: Text('Create new one', style: TextStyle(fontSize:12,color:Colors.grey))),
+                ],
+              )),
+        ));
   }
 }
