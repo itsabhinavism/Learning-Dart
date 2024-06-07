@@ -44,9 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Center( child: Container(width:1000,height:300,margin: EdgeInsets.all(8),child:Padding(padding: EdgeInsets.all(10), child: Card( 
           shadowColor: Colors.lightGreen,
-          elevation: 10,
+          elevation: 10,margin:EdgeInsets.all(20),
           child: Container(
-              width: 10,margin: EdgeInsets.all(15),
+              width: 10,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
