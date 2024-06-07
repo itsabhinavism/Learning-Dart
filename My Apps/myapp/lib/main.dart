@@ -42,11 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Login Page', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.lightGreen,
         ),
-        body: Center( child: Container(width:1000,height:300,margin: EdgeInsets.all(8),child:Padding(padding: EdgeInsets.all(10), child: Card( 
+        body: Center( child: Container(width:380,height:300,margin: EdgeInsets.all(8),child:Padding(padding: EdgeInsets.all(10), child: Card( 
           shadowColor: Colors.lightGreen,
-          elevation: 10,margin:EdgeInsets.all(20),
+          elevation: 10,
           child: Container(
-              width: 10,
+              width: 10,margin: EdgeInsets.all(15),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

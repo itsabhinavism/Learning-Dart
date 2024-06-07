@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Login Page', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.lightGreen,
         ),
-        body: Center( child: Container(width:1000,height:300,margin: EdgeInsets.all(8),child:Padding(padding: EdgeInsets.all(10), child: Card( 
+        body: Center( child: Container(width:380,height:300,margin: EdgeInsets.all(8),child:Padding(padding: EdgeInsets.all(10), child: Card( 
           shadowColor: Colors.lightGreen,
           elevation: 10,
           child: Container(
@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         String uPhNo = phno.text.toString();
                         String uPw = pw.text;
 
-                        print("Email: $uPhNo, Password: $uPw");
+                        print("Phone Number: $uPhNo, Password: $uPw");
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
