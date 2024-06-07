@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(height: 20),
 
-                  Container(width:1000,color:Colors.lightGreen,child:
+                  Container(width:1000,child:
                   ElevatedButton(
                       onPressed: () {
                         String uPhNo = phno.text.toString();
