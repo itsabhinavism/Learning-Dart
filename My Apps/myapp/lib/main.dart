@@ -117,10 +117,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               'assets/images/icons/key-solid.png',
                               color: Color.fromARGB(255, 103, 103, 103)),
                         ),
+                      ), suffixIcon: Container(
+                        width: 30,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 15, right: 15),
+                          child: Image.asset(
+                              'assets/images/icons/lock-solid.png',
+                              color: Color.fromARGB(255, 103, 103, 103)),
+                        ),
                       ),
                     ),
                   ),
                   Container(height: 15),
+
+                  Container(width:1000, child:
                   ElevatedButton(
                       onPressed: () {
                         String uPhNo = phno.text.toString();
@@ -134,10 +144,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: Text("Login",
-                          style: TextStyle(color: Colors.lightGreen))),
+                          style: TextStyle(color: Colors.lightGreen))),),
 
                           Container(height:10),
-                          Container(height:1,width:1, child: Text('Create new one', style: TextStyle(fontSize:12,color:Colors.grey))),
+                         Center( 
+                          child: Text('Forgotten your password?', style: TextStyle(fontSize:12,
+                          fontStyle:FontStyle.italic,color:Colors.grey)),),
                 ],
               )),
         ));
