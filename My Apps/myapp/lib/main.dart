@@ -42,9 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Login Page', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.lightGreen,
         ),
-        body: Center(
+        body: Center( child: Container(width:1000,height:300,margin: EdgeInsets.all(8),child:Padding(padding: EdgeInsets.all(10), child: Card( 
+          shadowColor: Colors.lightGreen,
+          elevation: 10,
           child: Container(
-              width: 400,
+              width: 10,margin: EdgeInsets.all(15),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -128,9 +130,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-                  Container(height: 15),
+                  Container(height: 20),
 
-                  Container(width:1000, child:
+                  Container(width:1000,color:Colors.lightGreen,child:
                   ElevatedButton(
                       onPressed: () {
                         String uPhNo = phno.text.toString();
@@ -151,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Text('Forgotten your password?', style: TextStyle(fontSize:12,
                           fontStyle:FontStyle.italic,color:Colors.grey)),),
                 ],
-              )),
+              )),),),),
         ));
   }
 }
