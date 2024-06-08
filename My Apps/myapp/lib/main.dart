@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             headlineSmall:
                 TextStyle(fontSize: 101, fontWeight: FontWeight.bold),
-            headlineMedium: TextStyle(color:Colors.red,
+            headlineMedium: TextStyle(
+                color: Colors.red,
                 fontSize: 51,
                 fontWeight: FontWeight.w500,
                 fontStyle: FontStyle.italic),
@@ -42,22 +43,29 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var time= DateTime.now();
+    var time = DateTime.now();
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Clock Widget'),
-        backgroundColor: Colors.lightGreen,
-      ),
-      body: Center(child: Container(width:100,height:100,
-      child: Column(mainAxisAlignment:MainAxisAlignment.center,
-      
-      children:[Text("Current Time: ${time.hour}:${time.minute}:${time.second} ",
-      style:TextStyle(fontSize:12,color:Colors.lightGreen)),
-      ElevatedButton(onPressed: (), )
-      
-      ])),
-      
-      )
-    );
+        appBar: AppBar(
+          title: Text('Clock Widget'),
+          backgroundColor: Colors.lightGreen,
+        ),
+        body: Center(
+          child: Container(
+              width: 100,
+              height: 100,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                        "Current Time: ${time.hour}:${time.minute}:${time.second} ",
+                        style:
+                            TextStyle(fontSize: 12, color: Colors.lightGreen)),
+                    ElevatedButton(
+                        onPressed: () {
+                          setState(() {});
+                        },
+                        child: Text("Current Time"))
+                  ])),
+        ));
   }
 }
