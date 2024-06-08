@@ -37,13 +37,13 @@ class _MyHomePageState extends State<MyHomePage> {
     var phno = TextEditingController();
     var pw = TextEditingController();
 
-    return Scaffold(
+    return Center(child: Scaffold(
         appBar: AppBar(),
         body: Center(
           child: Container(
-            width: 380,
-            height: 320,
-            margin: EdgeInsets.all(8),
+            width: 350,
+            height: 360,
+            margin: EdgeInsets.all(5),
             child: Padding(
               padding: EdgeInsets.all(10),
               child: Card(
@@ -59,17 +59,17 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 50,
                           width: 300,
                           child:
-                            Padding (padding: EdgeInsets.only(right: 200),
+                            Padding (padding: EdgeInsets.only(right: 140),
                             child: Text(
                               "Login",
                               style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 45,
                                   fontFamily:'cursive1',
                                   color: Colors.lightGreen),
                             ),),
                           ),
 
-                          Container(height:10),
+                          Container(height:12),
                       TextField(
                         keyboardType: TextInputType.phone,
                         controller: phno,
@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                       ),
-                      Container(height: 13),
+                      Container(height: 15),
                       TextField(
                         controller: pw,
                         obscureText: true,
@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                           suffixIcon: Container(
-                            width: 30,
+                            width: 44,
                             child: Padding(
                               padding: EdgeInsets.only(left: 15, right: 15),
                               child: Image.asset(
@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                       ),
-                      Container(height: 20),
+                      Container(height: 13),
                       Container(
                         width: 1000,
                         child: ElevatedButton(
@@ -167,19 +167,22 @@ class _MyHomePageState extends State<MyHomePage> {
                                       MyHomePage(title: 'Home')),
                             );
                           },
-                          child: Text("Login",
-                              style: (TextStyle(
-                                color: Colors.lightGreen,
-                              ))),
+                          child: Text("Submit",style: TextStyle(
+        color: const Color.fromARGB(255, 255, 255, 255),
+      )),
+  style: ButtonStyle(
+    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+  
+                        ),
                         ),
                       ),
-                      Container(height:13),
-                      Center(
-                        child: Text('Forgotten your password?',
+                      Container(height:9),
+                      Center(child: Column(children:[
+                        Text('Forgotten your password? Eat almonds daily...',
                             style: TextStyle(
                                 fontSize: 12,
                                 fontStyle: FontStyle.italic,
-                                color: Colors.grey)),
+                                color: Colors.grey)),],),
                       ),
                     ],
                   ),
@@ -187,6 +190,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-        ));
+        )));
   }
 }

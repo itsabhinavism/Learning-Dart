@@ -78,7 +78,7 @@ flutter:
   fonts:
     - family: cursive1
       fonts:
-        - asset: assets/fonts/CedarvilleCursive-Regular.ttf
+        - asset: assets/fonts/Teko-Bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
