@@ -37,7 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
     var time = DateTime.now();
 
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(title: Text('Current Time Finder'),
+        backgroundColor: Colors.lightGreen,),
         body: Center(
           child: Card(
             shadowColor: Colors.lightGreen,

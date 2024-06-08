@@ -37,23 +37,24 @@ class _MyHomePageState extends State<MyHomePage> {
     var time = DateTime.now();
 
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(title: Text('Current Time Finder'),
+        backgroundColor: Colors.lightGreen,),
         body: Center(
           child: Card(
             shadowColor: Colors.lightGreen,
             elevation: 30,
             child: Container(
-              width: 100,
-              height: 200,
+              width: 350,
+              height: 180,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Center(
+                  Center(child:Padding(padding: EdgeInsets.all(8),
                     child: RichText(
                       text: TextSpan(
                         text: 'Current Time --> ',
                         style:
-                            TextStyle(fontSize: 15, color: Colors.lightGreen),
+                            TextStyle(fontSize: 20, color: Colors.lightGreen),
                         children: <TextSpan>[
                           TextSpan(
                               text:
@@ -61,9 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
                               style: TextStyle(color: Colors.black)),
                         ],
                       ),
-                    ),
+                    ),),
                   ),
-                  Container(height: 10),
+                  Container(height: 7),
                   ElevatedButton(
                       onPressed: () {
                         setState(() {});
