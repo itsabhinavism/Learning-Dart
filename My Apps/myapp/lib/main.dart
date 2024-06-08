@@ -43,17 +43,17 @@ class _MyHomePageState extends State<MyHomePage> {
             shadowColor: Colors.lightGreen,
             elevation: 30,
             child: Container(
-              width: 400,
-              height: 200,
+              width: 350,
+              height: 180,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Center(
+                  Center(child:Padding(padding: EdgeInsets.all(8),
                     child: RichText(
                       text: TextSpan(
                         text: 'Current Time --> ',
                         style:
-                            TextStyle(fontSize: 25, color: Colors.lightGreen),
+                            TextStyle(fontSize: 20, color: Colors.lightGreen),
                         children: <TextSpan>[
                           TextSpan(
                               text:
@@ -61,9 +61,9 @@ class _MyHomePageState extends State<MyHomePage> {
                               style: TextStyle(color: Colors.black)),
                         ],
                       ),
-                    ),
+                    ),),
                   ),
-                  Container(height: 10),
+                  Container(height: 7),
                   ElevatedButton(
                       onPressed: () {
                         setState(() {});

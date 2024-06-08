@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
             shadowColor: Colors.lightGreen,
             elevation: 30,
             child: Container(
-              width: 400,
+              width: 100,
               height: 200,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       text: TextSpan(
                         text: 'Current Time --> ',
                         style:
-                            TextStyle(fontSize: 25, color: Colors.lightGreen),
+                            TextStyle(fontSize: 15, color: Colors.lightGreen),
                         children: <TextSpan>[
                           TextSpan(
                               text:
