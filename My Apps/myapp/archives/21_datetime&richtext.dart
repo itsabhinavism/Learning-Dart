@@ -1,6 +1,7 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,8 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             TextStyle(fontSize: 20, color: Colors.lightGreen),
                         children: <TextSpan>[
                           TextSpan(
-                              text:
-                                  '${time.hour}hr ${time.minute}min ${time.second}s',
+                               text: '${DateFormat('jms').format(time)}',
                               style: TextStyle(color: Colors.black)),
                         ],
                       ),
