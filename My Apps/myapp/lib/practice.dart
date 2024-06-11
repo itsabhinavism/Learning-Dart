@@ -55,13 +55,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 Center(
                   child: Padding(
                     padding: EdgeInsets.all(8),
-                    child: Text( 'Selected Date',
+                    child: RichText(
+                      text: TextSpan(
+                        text: 'Selected Date',
                         style:
                             TextStyle(fontSize: 20, color: Colors.lightGreen),
-                        
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: '${DateFormat('jms').format(time)}',
+                              style: TextStyle(color: Colors.black)),
+                        ],
                       ),
                     ),
-                 
+                  ),
                 ),
                 ElevatedButton(
                     onPressed: () async {
