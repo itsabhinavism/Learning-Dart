@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Date selected: ${datePicked.day}--${datePicked.month}--${datePicked.year}');
                         }
                       },
-                      child: Text('Calenasdar')),
+                      child: Text('Calendar')),
                 ],
               ),
             ),
