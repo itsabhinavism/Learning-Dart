@@ -43,43 +43,28 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.lightGreen,
       ),
       body: Center(
-        child: Card(
-          shadowColor: Colors.lightGreen,
-          elevation: 30,
-          child: Container(
-            width: 350,
-            height: 480,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(8),
-                    child: Text( 'Selected Date',
-                        style:
-                            TextStyle(fontSize: 20, color: Colors.lightGreen),
-                        
-                      ),
-                    ),
-                 
-                ),
-                ElevatedButton(
-                    onPressed: () async {
-                      DateTime? datePicked = await showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2021),
-                          lastDate: DateTime(2024));
-
-                      if (datePicked != null) {
-                        print(
-                            'Date selected: ${datePicked.day}--${datePicked.month}--${datePicked.year}');
-                      }
-                    },
-                    child: Text('Show'))
-              ],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Selected Date',
+              style: TextStyle(fontSize: 20, color: Colors.lightGreen),
             ),
-          ),
+            ElevatedButton(
+                onPressed: () async {
+                  DateTime? datePicked = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2021),
+                      lastDate: DateTime(2023));
+
+                  if (datePicked != null) {
+                    print(
+                        'Date selected: ${datePicked.day}--${datePicked.month}--${datePicked.year}');
+                  }
+                },
+                child: Text('Show'))
+          ],
         ),
       ),
     );
