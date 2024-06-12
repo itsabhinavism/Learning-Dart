@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                         if (datePicked != null) {
                           print(
-                              'Date selected: ${datePicked.day}--${datePicked.month}--${datePicked.year}');
+                              'Date selected: ${datePicked.day}/${datePicked.month}/${datePicked.year}');
                         }
                       },
                       child: Text('Calendar')),
