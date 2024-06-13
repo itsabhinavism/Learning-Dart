@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             TimeOfDay? pickedTime = await showTimePicker(
                                 context: context,
                                 initialTime: TimeOfDay.now(),
-                                initialEntryMode: TimePickerEntryMode.dial);
+                                initialEntryMode: TimePickerEntryMode.dia
 
                             if (pickedTime != null) {
                               print(
