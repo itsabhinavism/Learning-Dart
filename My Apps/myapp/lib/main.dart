@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'My Flutter App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+   
       ),
       home: const MyHomePage(title: 'Home'),
     );
@@ -35,6 +35,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var time = DateTime.now();
+    var arrColors= [Colors.black,
+    Color.fromARGB(255, 0, 234, 255),
+    Colors.green,
+    Color.fromARGB(255, 0, 255, 30),
+    Colors.yellow,Colors.pink,
+    Colors.blueAccent,
+    Colors.purple,
+    Colors.red,
+    Colors.orange];
 
     return Scaffold(
         appBar: AppBar(
@@ -43,55 +52,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.white, fontFamily: 'font1', fontSize: 30)),
           backgroundColor: Colors.lightGreen,
         ),
-        body: Center(
-            child: Card(
-                shadowColor: Colors.lightGreen,
-                elevation: 17,
-                child: Container(
-                    width: 200,
-                    height: 200,
-                    child: Center(
-                        child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Select',
-                          style: TextStyle(
-                              fontSize: 30,
-                              color: Colors.lightGreen,
-                              fontFamily: 'font1'),
-                        ),
-                        Container(height: 5),
-                        ElevatedButton(
-                            onPressed: () async {
-                              DateTime? datePicked = await showDatePicker(
-                                  context: context,
-                                  initialDate: DateTime.now(),
-                                  firstDate: DateTime(2021),
-                                  lastDate: DateTime(2025));
+        body:  Container(
+          width:200,
+          child: GridView.count(crossAxisCount : 5,
+          crossAxisSpacing:11, mainAxisSpacing:11,
+           children:[
+ Container(color:arrColors[1],),
+  Container(color:arrColors[2],),
+   Container(color:arrColors[3],),
+    Container(color:arrColors[4],),
+     Container(color:arrColors[5],),
+      Container(color:arrColors[6],),
+       Container(color:arrColors[7],),
+        Container(color:arrColors[8],),
 
-                              if (datePicked != null) {
-                                print(
-                                    'Date selected : ${datePicked.day}/ ${datePicked.month}/${datePicked.year}');
-                              }
-                            },
-                            child: Text('Calendar')),
-                        Container(height: 5),
-                        ElevatedButton(
-                          onPressed: () async {
-                            TimeOfDay? pickedTime = await showTimePicker(
-                                context: context,
-                                initialTime: TimeOfDay.now(),
-                                initialEntryMode: TimePickerEntryMode.dial);
-
-                            if (pickedTime != null) {
-                              print(
-                                  "Time Selected : ${pickedTime.hour}:${pickedTime.minute}");
-                            }
-                          },
-                          child: Text("Select Time"),
-                        ),
-                      ],
-                    ))))));
+          ],
+        )
+        )
+        );
   }
 }
