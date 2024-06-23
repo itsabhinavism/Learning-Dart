@@ -53,9 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.white, fontFamily: 'font1', fontSize: 30)),
         backgroundColor: Colors.lightGreen,
       ),
-      body: Center(
+      body: Center(child:Padding(padding: EdgeInsets.all(20),
         child: Container(
-          width: 500,
+          width: 700,
           child: GridView.extent(
             maxCrossAxisExtent:200,
             crossAxisSpacing: 21,
@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
-        ),
+        ),),
       ),
     );
   }
