@@ -57,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           width: 700,
           child: GridView.extent(
+            
             maxCrossAxisExtent:200,
             crossAxisSpacing: 21,
             mainAxisSpacing: 21,
