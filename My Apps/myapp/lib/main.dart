@@ -30,6 +30,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+callBack(){
+  print('Clicked!!');
+}
+
   @override
   Widget build(BuildContext context) {
     var time = DateTime.now();
@@ -48,60 +53,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Grid View',
+        title: Text('Call Back Function',
             style: TextStyle(
                 color: Colors.white, fontFamily: 'font1', fontSize: 30)),
         backgroundColor: Colors.lightGreen,
       ),
-      body: Center(child:Padding(padding: EdgeInsets.all(20),
-        child: Container(
-          width: 500,
-          height: 900,
-          child: GridView.extent(
-            maxCrossAxisExtent:180,
-            crossAxisSpacing: 21,
-            mainAxisSpacing: 21,
-            children: [
-              Container(
-                color: arrColors[1],
-              ),
-              Container(
-                color: arrColors[2],
-              ),
-              Container(
-                color: arrColors[3],
-              ),
-              Container(
-                color: arrColors[4],
-              ),
-              Container(
-                color: arrColors[5],
-              ),
-              Container(
-                color: arrColors[6],
-              ),
-              Container(
-                color: arrColors[7],
-              ),
-              Container(
-                color: arrColors[8],
-              ),
-              Container(
-                color: arrColors[4],
-              ),
-              Container(
-                color: arrColors[3],
-              ),
-              Container(
-                color: arrColors[2],
-              ),
-              Container(
-                color: arrColors[1],
-              ),
-            ],
-          ),
-        ),),
-      ),
+      body: ElevatedButton(child: Text('Click me') ,
+      onPressed: callBack,)
     );
   }
 }

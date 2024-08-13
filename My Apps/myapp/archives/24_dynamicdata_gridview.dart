@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Grid View',
             style: TextStyle(
                 color: Colors.white, fontFamily: 'font1', fontSize: 30)),
-        backgroundColor: const Color.fromARGB(255, 39, 71, 4),
+        backgroundColor: Colors.lightGreen,
       ),
       body: GridView.builder( itemBuilder:(context,index){
         return Container(color:arrColors[index],);
