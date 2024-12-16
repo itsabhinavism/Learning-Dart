@@ -1,6 +1,6 @@
 import 'dart:collection';
+
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My Flutter App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+      ),
       home: const MyHomePage(title: 'Home'),
     );
   }
@@ -30,36 +32,170 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-callBack(){
-  print('Clicked!!');
-}
-
   @override
   Widget build(BuildContext context) {
-    var time = DateTime.now();
-    var arrColors = [
-      Colors.black,
-      Color.fromARGB(255, 0, 234, 255),
-      Colors.green,
-      Color.fromARGB(255, 0, 255, 30),
-      Colors.yellow,
-      Colors.pink,
-      Colors.blueAccent,
-      Colors.purple,
-      Colors.red,
-      Colors.orange
+    var arrNames = [
+      'Abhinav',
+      'Abhishek',
+      'Aditya',
+      'Aman',
+      'Abhay',
+      'Ashish',
+      'Abhinandan',
+      'Shresth',
+      'Rudra',
+      'Souptik',
     ];
 
+    var arrJobs = [
+      'Photographer',
+      'Engineer',
+      'Doctor',
+      'SalesMan',
+      'Graphic Designer',
+      'Programmer',
+      'Musician ',
+      'Web Developer',
+      'Android Developer',
+      'Gamer',
+    ];
+
+    var arrPfp = [
+      'assets/images/icons/user-regular.png',
+      'assets/images/icons/user-tie-solid.png',
+      'assets/images/icons/user-shield-solid.png',
+      'assets/images/icons/user-pen-solid.png',
+      'assets/images/icons/user-nurse-solid.png',
+      'assets/images/icons/user-ninja-solid.png',
+      'assets/images/icons/user-lock-solid.png',
+      'assets/images/icons/user-graduate-solid.png',
+      'assets/images/icons/user-gear-solid.png',
+      'assets/images/icons/user-solid.png',
+    ];
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Call Back Function',
-            style: TextStyle(
-                color: Colors.white, fontFamily: 'font1', fontSize: 30)),
-        backgroundColor: Colors.lightGreen,
+        appBar: AppBar(
+          title: Text('Contact List', style: TextStyle(color: Colors.white)),
+          backgroundColor: Color.fromARGB(255, 168, 110, 255),
+        ),
+        body: Container( height: 700,
+            child: Column(
+          children: [CatItems(), Contact(), CatItems()],
+        )));
+  }
+}
+
+class CatItems extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var arrPfp = [
+      'assets/images/icons/user-regular.png',
+      'assets/images/icons/user-tie-solid.png',
+      'assets/images/icons/user-shield-solid.png',
+      'assets/images/icons/user-pen-solid.png',
+      'assets/images/icons/user-nurse-solid.png',
+      'assets/images/icons/user-ninja-solid.png',
+      'assets/images/icons/user-lock-solid.png',
+      'assets/images/icons/user-graduate-solid.png',
+      'assets/images/icons/user-gear-solid.png',
+      'assets/images/icons/user-solid.png',
+    ];
+    return Expanded(
+      flex: 1,
+      child: Container(
+        color: Color.fromARGB(255, 204, 170, 255),
+        child: ListView.builder(
+            itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.all(16.2),
+                  child: SizedBox(
+                    width: 80,
+                    child: CircleAvatar(child: Container(width:20,
+                          height: 20,
+                      decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(arrPfp[index]),
+                            ),
+                          ),
+                    ),),
+                  ),
+                ),
+            itemCount: 10,
+            scrollDirection: Axis.horizontal),
       ),
-      body: ElevatedButton(child: Text('Click me') ,
-      onPressed: callBack,)
     );
   }
 }
+
+class Contact extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var arrPfp = [
+      'assets/images/icons/user-regular.png',
+      'assets/images/icons/user-tie-solid.png',
+      'assets/images/icons/user-shield-solid.png',
+      'assets/images/icons/user-pen-solid.png',
+      'assets/images/icons/user-nurse-solid.png',
+      'assets/images/icons/user-ninja-solid.png',
+      'assets/images/icons/user-lock-solid.png',
+      'assets/images/icons/user-graduate-solid.png',
+      'assets/images/icons/user-gear-solid.png',
+      'assets/images/icons/user-solid.png',
+    ];
+    var arrNames = [
+      'Abhinav',
+      'Abhishek',
+      'Aditya',
+      'Aman',
+      'Abhay',
+      'Ashish',
+      'Abhinandan',
+      'Shresth',
+      'Rudra',
+      'Souptik',
+    ];
+
+    var arrJobs = [
+      'Photographer',
+      'Engineer',
+      'Doctor',
+      'SalesMan',
+      'Graphic Designer',
+      'Programmer',
+      'Musician ',
+      'Web Developer',
+      'Android Developer',
+      'Gamer',
+    ];
+    return Expanded(
+      flex: 4,
+      child: Container(
+          color: Color.fromARGB(255, 255, 255, 255),
+          child: ListView.builder(
+              itemBuilder: (context, index) => Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: ListTile(
+                      leading:  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('${index + 1}' '.' '  '),
+                      
+                      
+                      CircleAvatar(child: Container(width: 20,
+                          height: 20,
+                      decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(arrPfp[index]),
+                            ),
+                          ),
+                      ),
+                      ),],),title: Text(arrNames[index]),
+                  subtitle: Text(arrJobs[index]),
+                  trailing: Icon(Icons.add),
+                      
+                    ),
+                  ))),
+    );
+  }
+}
+
