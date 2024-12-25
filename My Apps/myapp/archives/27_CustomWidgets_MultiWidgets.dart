@@ -34,17 +34,53 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    
+    var arrNames = [
+      'Abhinav',
+      'Abhishek',
+      'Aditya',
+      'Aman',
+      'Abhay',
+      'Ashish',
+      'Abhinandan',
+      'Shresth',
+      'Rudra',
+      'Souptik',
+    ];
+
+    var arrJobs = [
+      'Photographer',
+      'Engineer',
+      'Doctor',
+      'SalesMan',
+      'Graphic Designer',
+      'Programmer',
+      'Musician ',
+      'Web Developer',
+      'Android Developer',
+      'Gamer',
+    ];
+
+    var arrPfp = [
+      'assets/images/icons/user-regular.png',
+      'assets/images/icons/user-tie-solid.png',
+      'assets/images/icons/user-shield-solid.png',
+      'assets/images/icons/user-pen-solid.png',
+      'assets/images/icons/user-nurse-solid.png',
+      'assets/images/icons/user-ninja-solid.png',
+      'assets/images/icons/user-lock-solid.png',
+      'assets/images/icons/user-graduate-solid.png',
+      'assets/images/icons/user-gear-solid.png',
+      'assets/images/icons/user-solid.png',
+    ];
     return Scaffold(
         appBar: AppBar(
           title: Text('Contact List', style: TextStyle(color: Colors.white)),
           backgroundColor: Color.fromARGB(255, 168, 110, 255),
         ),
-        body: Container(
-            height: 700,
+        body: Container( height: 700,
             child: Column(
-              children: [CatItems(), Contact(), CatItems()],
-            )));
+          children: [CatItems(), Contact(), CatItems()],
+        )));
   }
 }
 
@@ -72,18 +108,15 @@ class CatItems extends StatelessWidget {
                   padding: const EdgeInsets.all(16),
                   child: SizedBox(
                     width: 80,
-                    child: CircleAvatar(
-                      child: Container(
-                        width: 20,
-                        height: 20,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage(arrPfp[index]),
+                    child: CircleAvatar(child: Container(width:20,
+                          height: 20,
+                      decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(arrPfp[index]),
+                            ),
                           ),
-                        ),
-                      ),
-                    ),
+                    ),),
                   ),
                 ),
             itemCount: 10,
@@ -141,29 +174,28 @@ class Contact extends StatelessWidget {
               itemBuilder: (context, index) => Padding(
                     padding: const EdgeInsets.all(2.0),
                     child: ListTile(
-                      leading: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text('${index + 1}' '.' '  '),
-                          CircleAvatar(
-                            child: Container(
-                              width: 20,
-                              height: 20,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage(arrPfp[index]),
-                                ),
-                              ),
+                      leading:  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('${index + 1}' '.' '  '),
+                      
+                      
+                      CircleAvatar(child: Container(width: 20,
+                          height: 20,
+                      decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(arrPfp[index]),
                             ),
                           ),
-                        ],
                       ),
-                      title: Text(arrNames[index]),
-                      subtitle: Text(arrJobs[index]),
-                      trailing: Icon(Icons.add),
+                      ),],),title: Text(arrNames[index]),
+                  subtitle: Text(arrJobs[index]),
+                  trailing: Icon(Icons.add),
+                      
                     ),
                   ))),
     );
   }
 }
+
