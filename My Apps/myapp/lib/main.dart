@@ -34,17 +34,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Contact List', style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 168, 110, 255),
-        ),
-        body: Container(
-            height: 700,
-            child: Column(
-              children: [CatItems(), Contact(), CatItems()],
-            )));
+      appBar: AppBar(
+        title: Text('Contact List', style: TextStyle(color: Colors.white)),
+        backgroundColor: Color.fromARGB(255, 168, 110, 255),
+      ),
+      body: Column(
+        children: [
+          CatItems(),
+          Expanded(child: Contact()),
+          CatItems(),
+        ],
+      ),
+    );
   }
 }
 
@@ -63,31 +65,30 @@ class CatItems extends StatelessWidget {
       'assets/images/icons/user-gear-solid.png',
       'assets/images/icons/user-solid.png',
     ];
-    return Expanded(
-      flex: 1,
-      child: Container(
-        color: Color.fromARGB(255, 204, 170, 255),
-        child: ListView.builder(
-            itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: SizedBox(
-                    width: 80,
-                    child: CircleAvatar(
-                      child: Container(
-                        width: 20,
-                        height: 20,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage(arrPfp[index]),
-                          ),
-                        ),
-                      ),
-                    ),
+    return Container(
+      height: 100,
+      color: Color.fromARGB(255, 204, 170, 255),
+      child: ListView.builder(
+        itemBuilder: (context, index) => Padding(
+          padding: const EdgeInsets.all(16),
+          child: SizedBox(
+            width: 80,
+            child: CircleAvatar(
+              child: Container(
+                width: 20,
+                height: 20,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage(arrPfp[index]),
                   ),
                 ),
-            itemCount: 10,
-            scrollDirection: Axis.horizontal),
+              ),
+            ),
+          ),
+        ),
+        itemCount: arrPfp.length,
+        scrollDirection: Axis.horizontal,
       ),
     );
   }
@@ -133,37 +134,37 @@ class Contact extends StatelessWidget {
       'Android Developer',
       'Gamer',
     ];
-    return Expanded(
-      flex: 4,
-      child: Container(
-          color: Color.fromARGB(255, 255, 255, 255),
-          child: ListView.builder(
-              itemBuilder: (context, index) => Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: ListTile(
-                      leading: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text('${index + 1}' '.' '  '),
-                          CircleAvatar(
-                            child: Container(
-                              width: 20,
-                              height: 20,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage(arrPfp[index]),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+    return Container(
+      color: Color.fromARGB(255, 255, 255, 255),
+      child: ListView.builder(
+        itemBuilder: (context, index) => Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: ListTile(
+            leading: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text('${index + 1}.  '),
+                CircleAvatar(
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage(arrPfp[index]),
                       ),
-                      title: Text(arrNames[index]),
-                      subtitle: Text(arrJobs[index]),
-                      trailing: Icon(Icons.add),
                     ),
-                  ))),
+                  ),
+                ),
+              ],
+            ),
+            title: Text(arrNames[index]),
+            subtitle: Text(arrJobs[index]),
+            trailing: Icon(Icons.add),
+          ),
+        ),
+        itemCount: arrNames.length,
+      ),
     );
   }
 }
