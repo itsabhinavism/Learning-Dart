@@ -35,23 +35,29 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Contact List', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 168, 110, 255),
-      ),
-      body: Stack (
-        children: [
-          Container (
-            width:200,
-            height:200, color :Colors.blue,
+        appBar: AppBar(
+          title: Text('Contact List', style: TextStyle(color: Colors.white)),
+          backgroundColor: Color.fromARGB(255, 168, 110, 255),
+        ),
+        body: Container(width:300,height:300,
+        child:Stack(children: [
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.blue,
           ),
-
-          Positioned(left:21,top:21, child: Container(
-            width : 200,height:200, color: Colors.green,),
+          Positioned(
+            left: 21,
+            top: 21,
+            child: Container(
+              width: 300,
+              height: 300,
+              color: Colors.green,
+            ),
           )
-        ]
-      )
-    );
+        ]),
+        
+        ));
   }
 }
 
