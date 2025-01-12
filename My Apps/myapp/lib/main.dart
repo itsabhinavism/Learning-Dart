@@ -39,13 +39,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Contact List', style: TextStyle(color: Colors.white)),
         backgroundColor: Color.fromARGB(255, 168, 110, 255),
       ),
-      body: Column(
+      body: Stack (
         children: [
-          CatItems(),
-          Expanded(child: Contact()),
-          CatItems(),
-        ],
-      ),
+          Container (
+            width:200,
+            height:200, color :Colors.blue,
+          ),
+
+          Positioned(left:21,top:21, child: Container(
+            width : 200,height:200, color: Colors.green,),
+          )
+        ]
+      )
     );
   }
 }
