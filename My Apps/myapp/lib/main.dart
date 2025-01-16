@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My Flutter App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -34,17 +35,39 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrNames = ["Abhinav", "Abhishek ", "Aditya", "Aman", "Ashish"];
+   
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Home Page', style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 255, 0, 0),
-        ),
-        body: RoundedButton()
+      appBar: AppBar(
+        title: Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+      ),
+      body: Center(
+        child: RoundedButton(),
+      ),
+    );
+  }
+}
 
-        
-        
-         );
+class RoundedButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        // Define the action when the button is pressed
+        print('Button Pressed');
+      },
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12), // Rounded corners
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        backgroundColor: Colors.blue, // Background color
+      ),
+      child: Text(
+        'Press Me',
+        style: TextStyle(color: Colors.white),
+      ),
+    );
   }
 }
