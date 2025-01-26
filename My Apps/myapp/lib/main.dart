@@ -40,14 +40,30 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Color.fromARGB(255, 255, 0, 0),
         ),
         body: Center(
-            child: Container(
-                width: 300,
-                child: RoundedButton(
-                  btnName: 'Login',
-                  icon: Icon(Icons.lock),
-                  callBack: () {
-                    print('Logged in!');
-                  },
-                ))));
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Container(
+              width: 250,
+              height: 70,
+              child: RoundedButton(
+                btnName: 'Login',
+                icon: Icon(Icons.lock),
+                callBack: () {
+                  print('Logged in!');
+                },
+              )),
+          Container(height: 10),
+          Container(
+              width: 250,
+              height: 70,
+              child: RoundedButton(
+                btnName: 'Play', bgColor: Colors.orange,
+                icon: Icon(Icons.play_arrow),
+                callBack: () {
+                  print('Playing...');
+                },
+                
+              ))
+        ])));
   }
 }

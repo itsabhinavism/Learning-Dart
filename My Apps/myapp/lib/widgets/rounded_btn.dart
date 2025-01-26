@@ -22,8 +22,9 @@ class RoundedButton extends StatelessWidget {
         callBack!();
       },
       child: icon != null
-          ? Row(children: [
-              icon!, Container(width:5),
+          ? Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              icon!,
+              Container(width: 7),
               Text(
                 btnName,
                 style: textStyle,
