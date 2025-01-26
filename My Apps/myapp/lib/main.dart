@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets/rounded_btn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,13 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Home Page', style: TextStyle(color: Colors.white)),
           backgroundColor: Color.fromARGB(255, 255, 0, 0),
         ),
-        body: RoundedButton(
-          btnName: 'Login',
-          icon: Icon(Icons.lock),
-          callBack: () {
-            print('Logged in!');
-          },
-        )
-        );
+        body: Center(
+            child: Container(
+                width: 300,
+                child: RoundedButton(
+                  btnName: 'Login',
+                  icon: Icon(Icons.lock),
+                  callBack: () {
+                    print('Logged in!');
+                  },
+                ))));
   }
 }
