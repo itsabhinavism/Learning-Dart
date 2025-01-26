@@ -35,35 +35,42 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Home Page', style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 255, 0, 0),
-        ),
-        body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Container(
+      appBar: AppBar(
+        title: Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
               width: 250,
               height: 70,
               child: RoundedButton(
                 btnName: 'Login',
                 icon: Icon(Icons.lock),
+                bgColor: Colors.green, // Set the background color here
                 callBack: () {
                   print('Logged in!');
                 },
-              )),
-          Container(height: 10),
-          Container(
+              ),
+            ),
+            Container(height: 10),
+            Container(
               width: 250,
               height: 70,
               child: RoundedButton(
-                btnName: 'Play', bgColor: Colors.orange,
+                btnName: 'Play',
+                bgColor: Colors.orange, // Set the background color here
                 icon: Icon(Icons.play_arrow),
                 callBack: () {
                   print('Playing...');
                 },
-                
-              ))
-        ])));
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
