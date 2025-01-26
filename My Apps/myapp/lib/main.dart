@@ -39,7 +39,12 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Color.fromARGB(255, 255, 0, 0),
         ),
         body: RoundedButton(
-          
-        ));
+          btnName: 'Login',
+          icon: Icon(Icons.lock),
+          callBack: () {
+            print('Logged in!');
+          },
+        )
+        );
   }
 }
