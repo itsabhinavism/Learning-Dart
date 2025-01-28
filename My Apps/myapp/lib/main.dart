@@ -54,17 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   print('Logged in!');
                 },
               ),
-            ), Container(
-              width: 250,
-              height: 70,
-              child: RoundedButton(
-                btnName: 'Login',
-                icon: Icon(Icons.lock),
-                bgColor: Colors.green, // Set the background color here
-                callBack: () {
-                  print('Logged in!');
-                },
-              ),
             ),
             Container(height: 10),
             Container(
