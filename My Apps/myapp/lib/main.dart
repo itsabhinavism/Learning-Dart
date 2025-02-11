@@ -35,42 +35,54 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 255, 0, 0),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 250,
-              height: 70,
-              child: RoundedButton(
-                btnName: 'Login',
-                icon: Icon(Icons.lock),
-                bgColor: Colors.green, // Set the background color here
-                callBack: () {
-                  print('Logged in!');
-                },
-              ),
-            ),
-            Container(height: 10),
-            Container(
-              width: 250,
-              height: 70,
-              child: RoundedButton(
-                btnName: 'Play',
-                bgColor: Colors.orange, // Set the background color here
-                icon: Icon(Icons.play_arrow),
-                callBack: () {
-                  print('Playing...');
-                },
-              ),
-            ),
-          ],
+        appBar: AppBar(
+          title: Text('Home Page', style: TextStyle(color: Colors.white)),
+          backgroundColor: Color.fromARGB(255, 255, 0, 0),
         ),
-      ),
-    );
+        body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            child: Wrap(
+                direction: Axis.horizontal,
+                spacing: 11,
+                runSpacing: 11,
+                alignment: WrapAlignment.center,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.deepOrangeAccent,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Color.fromARGB(255, 60, 255, 30),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Color.fromARGB(255, 8, 36, 222),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Color.fromARGB(255, 235, 6, 185),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Color.fromARGB(255, 235, 82, 6),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Color.fromARGB(255, 6, 220, 235),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Color.fromARGB(255, 235, 6, 6),
+                  ),
+                ])));
   }
 }
