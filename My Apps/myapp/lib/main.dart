@@ -36,10 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Home Page', style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 255, 0, 0),
+          title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+          backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         ),
-        body: Container(
+        body: SizedBox(
             width: double.infinity,
             height: double.infinity,
             child: Wrap(
@@ -56,32 +56,32 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     width: 100,
                     height: 100,
-                    color: Color.fromARGB(255, 60, 255, 30),
+                    color: const Color.fromARGB(255, 60, 255, 30),
                   ),
                   Container(
                     width: 100,
                     height: 100,
-                    color: Color.fromARGB(255, 8, 36, 222),
+                    color: const Color.fromARGB(255, 8, 36, 222),
                   ),
                   Container(
                     width: 100,
                     height: 100,
-                    color: Color.fromARGB(255, 235, 6, 185),
+                    color: const Color.fromARGB(255, 235, 6, 185),
                   ),
                   Container(
                     width: 100,
                     height: 100,
-                    color: Color.fromARGB(255, 235, 82, 6),
+                    color: const Color.fromARGB(255, 235, 82, 6),
                   ),
                   Container(
                     width: 100,
                     height: 100,
-                    color: Color.fromARGB(255, 6, 220, 235),
+                    color: const Color.fromARGB(255, 6, 220, 235),
                   ),
                   Container(
                     width: 100,
                     height: 100,
-                    color: Color.fromARGB(255, 235, 6, 6),
+                    color: const Color.fromARGB(255, 235, 6, 6),
                   ),
                 ])));
   }

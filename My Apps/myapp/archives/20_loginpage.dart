@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -40,26 +40,26 @@ class _MyHomePageState extends State<MyHomePage> {
     return  Scaffold(
         appBar: AppBar(),
         body: Center(
-          child: Container(
+          child: SizedBox(
             width: 350,
             height: 360,
         
             child: Padding(
-              padding: EdgeInsets.only(top:15,bottom:15),
+              padding: const EdgeInsets.only(top:15,bottom:15),
               child: Card(
                 shadowColor: Colors.lightGreen,
                 elevation: 10,
                 child: Container(
                   width: 10,
-                  margin: EdgeInsets.all(15),
+                  margin: const EdgeInsets.all(15),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
+                      SizedBox(
                           height: 50,
                           width: 300,
                           child:
-                            Padding (padding: EdgeInsets.only(right: 150),
+                            const Padding (padding: EdgeInsets.only(right: 150),
                             child: Text(
                               "Login",
                               style: TextStyle(
@@ -77,35 +77,35 @@ class _MyHomePageState extends State<MyHomePage> {
                           hintText: 'Enter Phone Number',
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                   color: Colors.lightGreen, width: 2)),
 
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                   color: Color.fromARGB(255, 103, 103, 103),
                                   width: 2)),
 
                           //suffixText: "Phone number",
 
-                          suffixIcon: Container(
+                          suffixIcon: SizedBox(
                             height: 40,
                             width: 50,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 15, right: 15),
+                              padding: const EdgeInsets.only(left: 15, right: 15),
                               child: Image.asset(
                                   'assets/images/icons/eye-regular.png',
-                                  color: Color.fromARGB(255, 103, 103, 103)),
+                                  color: const Color.fromARGB(255, 103, 103, 103)),
                             ),
                           ),
 
-                          prefixIcon: Container(
+                          prefixIcon: SizedBox(
                             width: 50,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 15, right: 15),
+                              padding: const EdgeInsets.only(left: 15, right: 15),
                               child: Image.asset(
                                   'assets/images/icons/phone-solid.png',
-                                  color: Color.fromARGB(255, 103, 103, 103)),
+                                  color: const Color.fromARGB(255, 103, 103, 103)),
                             ),
                           ),
                         ),
@@ -119,40 +119,40 @@ class _MyHomePageState extends State<MyHomePage> {
                           hintText: "Enter Password",
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                   color: Colors.lightGreen, width: 2)),
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                   color: Color.fromARGB(255, 103, 103, 103),
                                   width: 2)),
                           disabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                   color: Color.fromARGB(255, 103, 103, 103),
                                   width: 2)),
-                          prefixIcon: Container(
+                          prefixIcon: SizedBox(
                             width: 50,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 15, right: 15),
+                              padding: const EdgeInsets.only(left: 15, right: 15),
                               child: Image.asset(
                                   'assets/images/icons/key-solid.png',
-                                  color: Color.fromARGB(255, 103, 103, 103)),
+                                  color: const Color.fromARGB(255, 103, 103, 103)),
                             ),
                           ),
-                          suffixIcon: Container(
+                          suffixIcon: SizedBox(
                             width: 44,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 15, right: 15),
+                              padding: const EdgeInsets.only(left: 15, right: 15),
                               child: Image.asset(
                                   'assets/images/icons/lock-solid.png',
-                                  color: Color.fromARGB(255, 103, 103, 103)),
+                                  color: const Color.fromARGB(255, 103, 103, 103)),
                             ),
                           ),
                         ),
                       ),
                       Container(height: 13),
-                      Container(
+                      SizedBox(
                         width: 1000,
                         child: ElevatedButton(
                           onPressed: () {
@@ -164,20 +164,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      MyHomePage(title: 'Home')),
+                                      const MyHomePage(title: 'Home')),
                             );
                           },
+  style: ButtonStyle(
+    backgroundColor: WidgetStateProperty.all<Color>(Colors.lightGreen),
+  
+                        ),
                           child: Text("Submit",style: TextStyle(
         color: const Color.fromARGB(255, 255, 255, 255),
       )),
-  style: ButtonStyle(
-    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
-  
-                        ),
                         ),
                       ),
                       Container(height:9),
-                      Center(child: Column(children:[
+                      const Center(child: Column(children:[
                         Text('Forgotten your password? Eat almonds daily...',
                             style: TextStyle(
                                 fontSize: 12,

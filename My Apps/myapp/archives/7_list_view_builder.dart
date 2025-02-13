@@ -38,14 +38,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('Home Page', style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 255, 0, 0),
+          title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+          backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         ),
         body: ListView.builder(
           itemBuilder: (context, index) {
             return Text(
               arrNames[index],
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
+              style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
             );
           },
           itemCount: arrNames.length,

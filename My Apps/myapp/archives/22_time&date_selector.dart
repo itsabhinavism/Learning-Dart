@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('Scheduler',
+          title: const Text('Scheduler',
               style: TextStyle(
                   color: Colors.white, fontFamily: 'font1', fontSize: 30)),
           backgroundColor: Colors.lightGreen,
@@ -47,14 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Card(
                 shadowColor: Colors.lightGreen,
                 elevation: 17,
-                child: Container(
+                child: SizedBox(
                     width: 200,
                     height: 200,
                     child: Center(
                         child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'Select',
                           style: TextStyle(
                               fontSize: 30,
@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     'Date selected : ${datePicked.day}/ ${datePicked.month}/${datePicked.year}');
                               }
                             },
-                            child: Text('Calendar')),
+                            child: const Text('Calendar')),
                         Container(height: 5),
                         ElevatedButton(
                           onPressed: () async {
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   "Time Selected : ${pickedTime.hour}:${pickedTime.minute}");
                             }
                           },
-                          child: Text("Select Time"),
+                          child: const Text("Select Time"),
                         ),
                       ],
                     ))))));

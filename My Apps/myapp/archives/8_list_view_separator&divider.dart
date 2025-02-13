@@ -38,8 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+        title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 255, 0, 0),
       ),
       body: 
         Padding(
@@ -48,12 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
               itemBuilder: (context, index) {
                 return Center(child:Text(
                   arrNames[index],
-                  style: TextStyle(fontSize: 25),
+                  style: const TextStyle(fontSize: 25),
                 ),);
               },
               itemCount: arrNames.length,
               separatorBuilder: (context, index) {
-                return Divider(
+                return const Divider(
                   height: 20,
                   thickness: 5,color:Colors.red,
                 );

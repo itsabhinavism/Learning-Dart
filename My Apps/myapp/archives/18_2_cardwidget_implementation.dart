@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -74,13 +74,13 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text('Contact List', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 168, 110, 255),
+        title: const Text('Contact List', style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 168, 110, 255),
       ),
       body: Stack(
         children: [
           Padding(
-            padding: EdgeInsets.only(bottom: 50), // Add this line
+            padding: const EdgeInsets.only(bottom: 50), // Add this line
             child: ListView.separated(
               itemBuilder: (context, index) {
                 return ListTile(
@@ -104,12 +104,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   title: Text(arrNames[index]),
                   subtitle: Text(arrJobs[index]),
-                  trailing: Icon(Icons.add),
+                  trailing: const Icon(Icons.add),
                 );
               },
               itemCount: arrNames.length,
               separatorBuilder: (context, index) {
-                return Divider(
+                return const Divider(
                   height: 40,
                   thickness: 2,
                 );
@@ -133,19 +133,19 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Menu.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 168, 110, 255),
+                      color: const Color.fromARGB(255, 168, 110, 255),
                       height: 55,
-                      child: Container(
+                      child: SizedBox(
                         width: 30,
                         height: 0,
                         child: Card(
                           shadowColor: const Color.fromARGB(255, 0, 0, 0),
-                          elevation: 8, margin: EdgeInsets.all(8.0),
+                          elevation: 8, margin: const EdgeInsets.all(8.0),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Image.asset(
                               'assets/images/icons/menu.png',
-                              color: Color.fromARGB(255, 56, 56, 56),
+                              color: const Color.fromARGB(255, 56, 56, 56),
                               height: 45,
                             ),
                           ),
@@ -167,19 +167,19 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Search Bar.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 168, 110, 255),
+                      color: const Color.fromARGB(255, 168, 110, 255),
                       height: 55,
-                      child: Container(
+                      child: SizedBox(
                         width: 30,
                         height: 0,
                         child: Card(
                           shadowColor: const Color.fromARGB(255, 0, 0, 0),
-                          elevation: 8, margin: EdgeInsets.all(8.0),
+                          elevation: 8, margin: const EdgeInsets.all(8.0),
                         child: Padding(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           child: Image.asset(
                             'assets/images/icons/search.png',
-                            color: Color.fromARGB(255, 56, 56, 56),
+                            color: const Color.fromARGB(255, 56, 56, 56),
                           ),
                         ),
                       ),),
@@ -199,19 +199,19 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Favoirate Button.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 168, 110, 255),
+                      color: const Color.fromARGB(255, 168, 110, 255),
                       height: 55,
-                     child: Container(
+                     child: SizedBox(
                         width: 30,
                         height: 0,
                         child: Card(
                           shadowColor: const Color.fromARGB(255, 0, 0, 0),
-                          elevation: 8, margin: EdgeInsets.all(8.0),
+                          elevation: 8, margin: const EdgeInsets.all(8.0),
                         child: Padding(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           child: Image.asset(
                             'assets/images/icons/fav.png',
-                            color: Color.fromARGB(255, 56, 56, 56),
+                            color: const Color.fromARGB(255, 56, 56, 56),
                           ),
                         ),
                       ),),
@@ -231,19 +231,19 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Settings.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 168, 110, 255),
+                      color: const Color.fromARGB(255, 168, 110, 255),
                       height: 55,
-                      child: Container(
+                      child: SizedBox(
                         width: 30,
                         height: 0,
                         child: Card(
                           shadowColor: const Color.fromARGB(255, 0, 0, 0),
-                          elevation: 8, margin: EdgeInsets.all(8.0),
+                          elevation: 8, margin: const EdgeInsets.all(8.0),
                         child: Padding(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           child: Image.asset(
                             'assets/images/icons/setting.png',
-                            color: Color.fromARGB(255, 56, 56, 56),
+                            color: const Color.fromARGB(255, 56, 56, 56),
                           ),
                         ),
                       ),

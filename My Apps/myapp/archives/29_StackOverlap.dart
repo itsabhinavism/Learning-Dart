@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -36,10 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Contact List', style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 168, 110, 255),
+          title: const Text('Contact List', style: TextStyle(color: Colors.white)),
+          backgroundColor: const Color.fromARGB(255, 168, 110, 255),
         ),
-        body: Container(
+        body: SizedBox(
           width: 300,
           height: 300,
           child: Stack(children: [
@@ -63,6 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class CatItems extends StatelessWidget {
+  const CatItems({super.key});
+
   @override
   Widget build(BuildContext context) {
     var arrPfp = [
@@ -79,7 +81,7 @@ class CatItems extends StatelessWidget {
     ];
     return Container(
       height: 100,
-      color: Color.fromARGB(255, 204, 170, 255),
+      color: const Color.fromARGB(255, 204, 170, 255),
       child: ListView.builder(
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.all(16),
@@ -107,6 +109,8 @@ class CatItems extends StatelessWidget {
 }
 
 class Contact extends StatelessWidget {
+  const Contact({super.key});
+
   @override
   Widget build(BuildContext context) {
     var arrPfp = [
@@ -147,7 +151,7 @@ class Contact extends StatelessWidget {
       'Gamer',
     ];
     return Container(
-      color: Color.fromARGB(255, 255, 255, 255),
+      color: const Color.fromARGB(255, 255, 255, 255),
       child: ListView.builder(
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.all(2.0),
@@ -172,7 +176,7 @@ class Contact extends StatelessWidget {
             ),
             title: Text(arrNames[index]),
             subtitle: Text(arrJobs[index]),
-            trailing: Icon(Icons.add),
+            trailing: const Icon(Icons.add),
           ),
         ),
         itemCount: arrNames.length,

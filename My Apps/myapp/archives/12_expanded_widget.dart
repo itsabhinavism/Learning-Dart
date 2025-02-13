@@ -36,8 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       body: Column(children: [
 Expanded(flex:2, child: Container(height:100,color:Colors.blue),),

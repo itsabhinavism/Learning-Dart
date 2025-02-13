@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -38,28 +38,28 @@ class _MyHomePageState extends State<MyHomePage> {
     var time = DateTime.now();
 
     return Scaffold(
-        appBar: AppBar(title: Text('Current Time Finder'),
+        appBar: AppBar(title: const Text('Current Time Finder'),
         backgroundColor: Colors.lightGreen,),
         body: Center(
           child: Card(
             shadowColor: Colors.lightGreen,
             elevation: 30,
-            child: Container(
+            child: SizedBox(
               width: 350,
               height: 180,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Center(child:Padding(padding: EdgeInsets.all(8),
+                  Center(child:Padding(padding: const EdgeInsets.all(8),
                     child: RichText(
                       text: TextSpan(
                         text: 'Current Time --> ',
                         style:
-                            TextStyle(fontSize: 20, color: Colors.lightGreen),
+                            const TextStyle(fontSize: 20, color: Colors.lightGreen),
                         children: <TextSpan>[
                           TextSpan(
-                               text: '${DateFormat('jms').format(time)}',
-                              style: TextStyle(color: Colors.black)),
+                               text: DateFormat('jms').format(time),
+                              style: const TextStyle(color: Colors.black)),
                         ],
                       ),
                     ),),
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       onPressed: () {
                         setState(() {});
                       },
-                      child: Text("Refresh"))
+                      child: const Text("Refresh"))
                 ],
               ),
             ),

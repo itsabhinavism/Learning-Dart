@@ -38,8 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       body: ListView.separated(
           itemBuilder: (context, index) {
@@ -53,13 +53,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Text(
                           arrNames[index],
-                          style: TextStyle(fontSize: 25),
+                          style: const TextStyle(fontSize: 25),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(2),
                           child: Text(
                             arrNames[index],
-                            style: TextStyle(fontSize: 25),
+                            style: const TextStyle(fontSize: 25),
                           ),
                         )
                       ],
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.all(2),
                     child: Text(
                       arrNames[index],
-                      style: TextStyle(fontSize: 25),
+                      style: const TextStyle(fontSize: 25),
                     ),
                   ),
                   Padding(
@@ -78,13 +78,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Text(
                           arrNames[index],
-                          style: TextStyle(fontSize: 25),
+                          style: const TextStyle(fontSize: 25),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(2),
                           child: Text(
                             arrNames[index],
-                            style: TextStyle(fontSize: 25),
+                            style: const TextStyle(fontSize: 25),
                           ),
                         )
                       ],
@@ -96,10 +96,10 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           itemCount: arrNames.length,
           separatorBuilder: (context, index) {
-            return Divider(
+            return const Divider(
               height: 300,
               thickness: 5,
-              color: const Color.fromARGB(255, 0, 0, 0),
+              color: Color.fromARGB(255, 0, 0, 0),
             );
           }),
     );

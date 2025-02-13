@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.blue,
-          textTheme: TextTheme(
+          textTheme: const TextTheme(
             headlineSmall:
                 TextStyle(fontSize: 101, fontWeight: FontWeight.bold),
             headlineMedium: TextStyle(color:Colors.red,
@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
         backgroundColor: Colors.orange,
       ),
       body: Column(
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
            Text(
             "Hello",
-            style: mText11(textColor:Color.fromARGB(255, 33, 243, 142)),
+            style: mText11(textColor:const Color.fromARGB(255, 33, 243, 142)),
           ),
         ],
       ),

@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -40,9 +40,9 @@ callBack(){
     var time = DateTime.now();
     var arrColors = [
       Colors.black,
-      Color.fromARGB(255, 0, 234, 255),
+      const Color.fromARGB(255, 0, 234, 255),
       Colors.green,
-      Color.fromARGB(255, 0, 255, 30),
+      const Color.fromARGB(255, 0, 255, 30),
       Colors.yellow,
       Colors.pink,
       Colors.blueAccent,
@@ -53,13 +53,12 @@ callBack(){
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Call Back Function',
+        title: const Text('Call Back Function',
             style: TextStyle(
                 color: Colors.white, fontFamily: 'font1', fontSize: 30)),
         backgroundColor: Colors.lightGreen,
       ),
-      body: ElevatedButton(child: Text('Click me') ,
-      onPressed: callBack,)
+      body: ElevatedButton(onPressed: callBack,child: Text('Click me') ,)
     );
   }
 }

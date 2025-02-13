@@ -36,43 +36,43 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Home Page', style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 255, 0, 0),
+          title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+          backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
           reverse: false,
-          children: [
+          children: const [
             Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text("One",
                     style: TextStyle(
                         fontSize: 35,
                         color: Colors.red,
                         fontWeight: FontWeight.w400))),
             Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text("Two",
                     style: TextStyle(
                         fontSize: 35,
                         color: Colors.red,
                         fontWeight: FontWeight.w400))),
             Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text("Three",
                     style: TextStyle(
                         fontSize: 35,
                         color: Colors.red,
                         fontWeight: FontWeight.w400))),
             Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text("Four",
                     style: TextStyle(
                         fontSize: 35,
                         color: Colors.red,
                         fontWeight: FontWeight.w400))),
             Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text("Five",
                     style: TextStyle(
                         fontSize: 35,

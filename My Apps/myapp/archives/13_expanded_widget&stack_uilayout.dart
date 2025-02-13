@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -36,13 +36,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title, style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: Text(widget.title, style: const TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       body: Stack(
         children: [
           Center(
-            child: Container(
+            child: SizedBox(
               width: 300,
               height: 100,
               child: Image.asset('assets/images/Flutter.png'),
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: const Color.fromARGB(255, 0, 0, 0),
                       height: 45,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/menu.png',
                       
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: const Color.fromARGB(255, 0, 0, 0),
                       height: 45,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/search.png',
                         ),
@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: const Color.fromARGB(255, 0, 0, 0),
                       height: 45,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/add.png',
                         ),
@@ -139,10 +139,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Settings.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       height: 45,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/setting.png',
                         ),

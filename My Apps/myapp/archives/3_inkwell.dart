@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
         backgroundColor: const Color.fromARGB(255, 191, 154, 255),
       ),
       body: Center(
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Container(
             width: 300,
             height: 200,
-            color: Color.fromARGB(255, 255, 146, 63),
+            color: const Color.fromARGB(255, 255, 146, 63),
             child: Center(
                 child: InkWell(
               onTap: () {
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onDoubleTap: () {
                 print("Double tapped on text widget.");
               },
-              child: Text("Guess the tap?",
+              child: const Text("Guess the tap?",
                   style: TextStyle(fontSize: 21, fontWeight: FontWeight.w800,color: Color.fromARGB(255, 255, 255, 255))),
             )),
           ),

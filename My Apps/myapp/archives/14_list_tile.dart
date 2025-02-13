@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -59,25 +59,25 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title, style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: Text(widget.title, style: const TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       body: Stack(
         children: [
           Padding(
-            padding: EdgeInsets.only(bottom: 50), // Add this line
+            padding: const EdgeInsets.only(bottom: 50), // Add this line
             child: ListView.separated(
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: Text('${index + 1}'),
                   title: Text(arrNames[index]),
                   subtitle: Text(arrJobs[index]),
-                  trailing: Icon(Icons.add),
+                  trailing: const Icon(Icons.add),
                 );
               },
               itemCount: arrNames.length,
               separatorBuilder: (context, index) {
-                return Divider(
+                return const Divider(
                   height: 20,
                   thickness: 2,
                 );
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: const Color.fromARGB(255, 0, 0, 0),
                       height: 45,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/icons/menu.png',
                           height: 45,
@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: const Color.fromARGB(255, 0, 0, 0),
                       height: 45,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/icons/search.png',
                         ),
@@ -153,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: const Color.fromARGB(255, 0, 0, 0),
                       height: 45,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/icons/add.png',
                         ),
@@ -174,10 +174,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       print("Double tapped on Settings.");
                     },
                     child: Container(
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       height: 45,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(
                           'assets/images/icons/setting.png',
                         ),

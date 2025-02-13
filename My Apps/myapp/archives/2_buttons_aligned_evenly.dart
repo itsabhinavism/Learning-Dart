@@ -36,10 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Home Page'),
+          title: const Text('Home Page'),
           backgroundColor: const Color.fromARGB(255, 191, 154, 255),
         ),
-        body: Container(
+        body: SizedBox(
           width: 10000,
           height: 10000,
           child: Column(
@@ -50,12 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ElevatedButton(onPressed: () {}, child: Text("A")),
-                  Text(
+                  ElevatedButton(onPressed: () {}, child: const Text("A")),
+                  const Text(
                     'for',
                     style: TextStyle(fontSize: 20),
                   ),
-                  Text(
+                  const Text(
                     'Apple',
                     style: TextStyle(fontSize: 20),
                   ),
@@ -65,29 +65,29 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ElevatedButton(onPressed: () {}, child: Text("B")),
-                  Text(
+                  ElevatedButton(onPressed: () {}, child: const Text("B")),
+                  const Text(
                     'for',
                     style: TextStyle(fontSize: 20),
                   ),
-                  Text(
+                  const Text(
                     'Ball',
                     style: TextStyle(fontSize: 20),
                   ),
                 ],
               ),
-              ElevatedButton(onPressed: () {}, child: Text("C")),
-              Text(
+              ElevatedButton(onPressed: () {}, child: const Text("C")),
+              const Text(
                 'for',
                 style: TextStyle(fontSize: 20),
               ),
-              Text('Cat', style: TextStyle(fontSize: 20)),
-              ElevatedButton(onPressed: () {}, child: Text("D")),
-              Text(
+              const Text('Cat', style: TextStyle(fontSize: 20)),
+              ElevatedButton(onPressed: () {}, child: const Text("D")),
+              const Text(
                 'for',
                 style: TextStyle(fontSize: 20),
               ),
-              Text(
+              const Text(
                 'Doll',
                 style: TextStyle(fontSize: 20),
               ),

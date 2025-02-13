@@ -36,10 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Center(
@@ -47,16 +47,16 @@ class _MyHomePageState extends State<MyHomePage> {
             width: 100,
             height: 100,
             decoration: BoxDecoration(
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: AssetImage('assets/images/Flutter.png'),
               ),
-              color: Color.fromARGB(255, 38, 38, 38),
-              borderRadius: BorderRadius.only(
+              color: const Color.fromARGB(255, 38, 38, 38),
+              borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(21),
                   bottomRight: Radius.circular(21)),
               border: Border.all(
                   width: 2, color: const Color.fromARGB(255, 255, 255, 255)),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(blurRadius: 21, color: Colors.green, spreadRadius: 7)
               ],
             ),

@@ -17,10 +17,8 @@ class MyApp extends StatelessWidget {
       title: 'PortfolioX',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-        accentColor: Coolors.secondaryColor,
         textTheme: GoogleFonts.poppinsTextTheme(),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        visualDensity: VisualDensity.adaptivePlatformDensity, colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange).copyWith(secondary: Coolors.secondaryColor),
       ),
       home: HomeScreen(),
     );

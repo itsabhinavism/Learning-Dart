@@ -36,8 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page',style : TextStyle(color:Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: const Text('Home Page',style : TextStyle(color:Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       body: Center(
           child: Padding(
@@ -56,10 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Red container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11),
+                    margin: const EdgeInsets.only(bottom: 11),
                     height: 100,
                     width: 100,
-                    color: Color.fromARGB(255, 255, 0, 0)),
+                    color: const Color.fromARGB(255, 255, 0, 0)),
               ),
               InkWell(
                 onTap: () {
@@ -72,10 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Yellow container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11),
+                    margin: const EdgeInsets.only(bottom: 11),
                     height: 120,
                     width: 140,
-                    color: Color.fromARGB(255, 242, 255, 0)),
+                    color: const Color.fromARGB(255, 242, 255, 0)),
               ),
               InkWell(
                 onTap: () {
@@ -88,10 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Green container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11),
+                    margin: const EdgeInsets.only(bottom: 11),
                     height: 140,
                     width: 180,
-                    color: Color.fromARGB(255, 98, 255, 0)),
+                    color: const Color.fromARGB(255, 98, 255, 0)),
               ),
               InkWell(
                 onTap: () {
@@ -104,10 +104,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Cyan container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11),
+                    margin: const EdgeInsets.only(bottom: 11),
                     height: 160,
                     width: 220,
-                    color: Color.fromARGB(255, 0, 225, 255)),
+                    color: const Color.fromARGB(255, 0, 225, 255)),
               ),
               InkWell(
                 onTap: () {
@@ -120,10 +120,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Blue container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11),
+                    margin: const EdgeInsets.only(bottom: 11),
                     height: 180,
                     width: 260,
-                    color: Color.fromARGB(255, 0, 85, 255)),
+                    color: const Color.fromARGB(255, 0, 85, 255)),
               ),
               InkWell(
                 onTap: () {
@@ -136,10 +136,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Pink container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11),
+                    margin: const EdgeInsets.only(bottom: 11),
                     height: 200,
                     width: 300,
-                    color: Color.fromARGB(255, 234, 0, 255)),
+                    color: const Color.fromARGB(255, 234, 0, 255)),
               ),
               InkWell(
                 onTap: () {
@@ -152,10 +152,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Purple container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11),
+                    margin: const EdgeInsets.only(bottom: 11),
                     height: 220,
                     width: 340,
-                    color: Color.fromARGB(255, 102, 0, 255)),
+                    color: const Color.fromARGB(255, 102, 0, 255)),
               ),
 
               InkWell(
@@ -169,10 +169,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("Double tapped on Cyan-Green container.");
                 },
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 11), 
+                    margin: const EdgeInsets.only(bottom: 11), 
                     height: 240,
                     width: 380,
-                    color: Color.fromARGB(255, 138, 255, 206)),
+                    color: const Color.fromARGB(255, 138, 255, 206)),
               ),
             ],
           ),

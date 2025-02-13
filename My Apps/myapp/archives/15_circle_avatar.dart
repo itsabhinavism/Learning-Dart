@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -59,11 +59,13 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title, style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: Text(widget.title, style: const TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       body: Center(
         child: CircleAvatar(
+          backgroundColor: Colors.black,
+          maxRadius: 80,
           child: Container(
             width: 120,
             height:120,child:Center(
@@ -79,8 +81,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),),
           ),
-          backgroundColor: Colors.black,
-          maxRadius: 80,
         ),
       ),
     );

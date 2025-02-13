@@ -37,19 +37,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+        title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 255, 0, 0),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: 250,
               height: 70,
               child: RoundedButton(
                 btnName: 'Login',
-                icon: Icon(Icons.lock),
+                icon: const Icon(Icons.lock),
                 bgColor: Colors.green, // Set the background color here
                 callBack: () {
                   print('Logged in!');
@@ -57,13 +57,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(height: 10),
-            Container(
+            SizedBox(
               width: 250,
               height: 70,
               child: RoundedButton(
                 btnName: 'Play',
                 bgColor: Colors.orange, // Set the background color here
-                icon: Icon(Icons.play_arrow),
+                icon: const Icon(Icons.play_arrow),
                 callBack: () {
                   print('Playing...');
                 },

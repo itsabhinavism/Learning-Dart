@@ -36,8 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+        title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 255, 0, 0),
       ),
       body: Center(
           child: Padding(
@@ -52,30 +52,30 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(
                     children: [
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 255, 0, 0)),
+                          color: const Color.fromARGB(255, 255, 0, 0)),
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 167, 167, 167)),
+                          color: const Color.fromARGB(255, 167, 167, 167)),
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 255, 240, 28)),
+                          color: const Color.fromARGB(255, 255, 240, 28)),
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 167, 167, 167)),
+                          color: const Color.fromARGB(255, 167, 167, 167)),
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 56, 255, 53)),
+                          color: const Color.fromARGB(255, 56, 255, 53)),
                     ],
                   ),
                 ),
@@ -86,11 +86,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   scrollDirection: Axis.horizontal,
                   child: Column(children: [
                     Container(
-                      margin: EdgeInsets.only(bottom: 10),
+                      margin: const EdgeInsets.only(bottom: 10),
                       height: 200,
                       width: 600,
-                      color: Color.fromARGB(255, 167, 167, 167),
-                      child: Center(
+                      color: const Color.fromARGB(255, 167, 167, 167),
+                      child: const Center(
                         child: Text(
                           'Gallery',
                           style: TextStyle(
@@ -110,9 +110,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Column(
                     children: [
                       Container(
-                          margin: EdgeInsets.only(bottom: 10),
+                          margin: const EdgeInsets.only(bottom: 10),
                           height: 200,
                           width: 600,
+                          color: const Color.fromARGB(255, 255, 0, 0),
                           child: Center(
                             child: Text(
                               'Prototype',
@@ -121,8 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 fontSize: 20,
                               ),
                             ),
-                          ),
-                          color: Color.fromARGB(255, 255, 0, 0)),
+                          )),
                     ],
                   ),
                 ),
@@ -134,30 +134,30 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(
                     children: [
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 167, 167, 167)),
+                          color: const Color.fromARGB(255, 167, 167, 167)),
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 255, 0, 0)),
+                          color: const Color.fromARGB(255, 255, 0, 0)),
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 56, 255, 53)),
+                          color: const Color.fromARGB(255, 56, 255, 53)),
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 167, 167, 167)),
+                          color: const Color.fromARGB(255, 167, 167, 167)),
                       Container(
-                          margin: EdgeInsets.only(bottom: 11),
+                          margin: const EdgeInsets.only(bottom: 11),
                           height: 200,
                           width: 220,
-                          color: Color.fromARGB(255, 255, 240, 28)),
+                          color: const Color.fromARGB(255, 255, 240, 28)),
                     ],
                   ),
                 ),

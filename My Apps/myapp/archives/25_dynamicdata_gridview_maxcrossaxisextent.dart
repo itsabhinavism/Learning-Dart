@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -35,9 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
     var time = DateTime.now();
     var arrColors = [
       Colors.black,
-      Color.fromARGB(255, 0, 234, 255),
+      const Color.fromARGB(255, 0, 234, 255),
       Colors.green,
-      Color.fromARGB(255, 0, 255, 30),
+      const Color.fromARGB(255, 0, 255, 30),
       Colors.yellow,
       Colors.pink,
       Colors.blueAccent,
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Grid View',
+        title: const Text('Grid View',
             style: TextStyle(
                 color: Colors.white, fontFamily: 'font1', fontSize: 30)),
         backgroundColor: Colors.lightGreen,
@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
           );
         },
         itemCount: arrColors.length, gridDelegate:
-        SliverGridDelegateWithMaxCrossAxisExtent(
+        const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,

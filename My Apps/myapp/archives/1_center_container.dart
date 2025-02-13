@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Home Page'),
+          title: const Text('Home Page'),
           backgroundColor: const Color.fromARGB(255, 191, 154, 255),
         ),
         body: Center(
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
           width: 300,
           height: 100,
           color: Colors.blue,
-          child: Center(
+          child: const Center(
             child: Text('This is Center.',
                 style: TextStyle(color: Color.fromARGB(255, 0, 255, 136))),
           ),
