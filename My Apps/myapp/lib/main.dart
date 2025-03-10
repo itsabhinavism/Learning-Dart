@@ -39,15 +39,23 @@ class _MyHomePageState extends State<MyHomePage> {
           title: const Text('Home Page', style: TextStyle(color: Colors.white)),
           backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         ),
-        body: Wrap(direction: Axis.vertical,children: [
-          SizedBox.square(
-            dimension: 200,
-            child: ElevatedButton(onPressed: () {}, child: Text('Click')),
-          ),
-          SizedBox(width:90),
-          SizedBox.square(
-              dimension: 200,
-              child: ElevatedButton(onPressed: () {}, child: Text('Click 2')))
-        ]));
+        body: RichText/*default textstyle*/(
+            text: TextSpan(
+                style: TextStyle(color: Colors.red, fontSize: 11),
+                children: <TextSpan>[
+              TextSpan(text: 'Hello'),
+              TextSpan(
+                  text: 'World',
+                  style: TextStyle(
+                      fontSize: 34,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold)),
+              TextSpan(
+                  text: 'Welcome to Flutter',
+                  style: TextStyle(
+                      fontSize: 45,
+                      color: const Color.fromARGB(255, 22, 198, 75),
+                      fontWeight: FontWeight.bold))
+            ])));
   }
 }

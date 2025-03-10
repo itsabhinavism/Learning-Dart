@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'widgets/rounded_btn.dart';
 
 void main() {
@@ -39,17 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
           title: const Text('Home Page', style: TextStyle(color: Colors.white)),
           backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         ),
-        body: ConstrainedBox(
-          constraints: BoxConstraints(
-            minWidth: 200,
-            minHeight: 40,
-            maxHeight: 60,
-            maxWidth:300
-            
+        body: Wrap(direction: Axis.vertical,children: [
+          SizedBox.square(
+            dimension: 200,
+            child: ElevatedButton(onPressed: () {}, child: Text('Click')),
           ),
-          child: SizedBox.expand(
-            child: ElevatedButton(onPressed : (){}, child: Text('Click'),)
-          )
-            ));
+          SizedBox(width:90),
+          SizedBox.square(
+              dimension: 200,
+              child: ElevatedButton(onPressed: () {}, child: Text('Click 2')))
+        ]));
   }
-}
+}*/

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:portfolio_x/header.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -67,4 +67,4 @@ class FooterScreen extends StatelessWidget {
       crossAlignment: CrossAxisAlignment.center,
     ).wFull(context).p16();
   }
-}
+}*/

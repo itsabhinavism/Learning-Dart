@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:portfolio_x/colors.dart';
 import 'package:portfolio_x/footer.dart';
 import 'package:portfolio_x/middle.dart';
@@ -19,4 +19,4 @@ class HomeScreen extends StatelessWidget {
       ]).scrollVertical(),
     );
   }
-}
+}*/
