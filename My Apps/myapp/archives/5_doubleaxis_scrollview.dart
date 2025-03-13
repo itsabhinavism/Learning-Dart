@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 200,
                           width: 600,
                           color: const Color.fromARGB(255, 255, 0, 0),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               'Prototype',
                               style: TextStyle(

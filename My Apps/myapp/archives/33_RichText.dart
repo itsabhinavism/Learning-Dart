@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         ),
         body: RichText/*default textstyle*/(
-            text: TextSpan(
+            text: const TextSpan(
                 style: TextStyle(color: Colors.red, fontSize: 11),
                 children: <TextSpan>[
               TextSpan(text: 'Hello'),
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   text: 'Welcome to Flutter',
                   style: TextStyle(
                       fontSize: 45,
-                      color: const Color.fromARGB(255, 22, 198, 75),
+                      color: Color.fromARGB(255, 22, 198, 75),
                       fontWeight: FontWeight.bold))
             ])));
   }

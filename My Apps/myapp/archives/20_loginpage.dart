@@ -55,11 +55,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                           height: 50,
                           width: 300,
                           child:
-                            const Padding (padding: EdgeInsets.only(right: 150),
+                            Padding (padding: EdgeInsets.only(right: 150),
                             child: Text(
                               "Login",
                               style: TextStyle(
@@ -171,8 +171,8 @@ class _MyHomePageState extends State<MyHomePage> {
     backgroundColor: WidgetStateProperty.all<Color>(Colors.lightGreen),
   
                         ),
-                          child: Text("Submit",style: TextStyle(
-        color: const Color.fromARGB(255, 255, 255, 255),
+                          child: const Text("Submit",style: TextStyle(
+        color: Color.fromARGB(255, 255, 255, 255),
       )),
                         ),
                       ),

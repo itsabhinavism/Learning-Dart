@@ -66,13 +66,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: CircleAvatar(
           backgroundColor: Colors.black,
           maxRadius: 80,
-          child: Container(
+          child: SizedBox(
             width: 120,
             height:120,child:Center(
             child: Column(
               children: [
                 Center(
-                  child: Container(
+                  child: SizedBox(
                     width: 100,
                     height: 100,
                     child: Image.asset('assets/images/icons/Flutter.png'),

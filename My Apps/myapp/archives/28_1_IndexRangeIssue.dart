@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: const Text('Contact List', style: TextStyle(color: Colors.white)),
           backgroundColor: const Color.fromARGB(255, 168, 110, 255),
         ),
-        body: SizedBox(
+        body: const SizedBox(
             height: 700,
             child: Column(
               children: [CatItems(), Contact(), CatItems()],

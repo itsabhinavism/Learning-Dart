@@ -58,7 +58,7 @@ callBack(){
                 color: Colors.white, fontFamily: 'font1', fontSize: 30)),
         backgroundColor: Colors.lightGreen,
       ),
-      body: ElevatedButton(onPressed: callBack,child: Text('Click me') ,)
+      body: ElevatedButton(onPressed: callBack,child: const Text('Click me') ,)
     );
   }
 }
