@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+//import 'widgets/rounded_btn.dart';//
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,6 +8,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
             text: const TextSpan(
                 style: TextStyle(color: Colors.red, fontSize: 11),
                 children: <TextSpan>[
-              TextSpan(text: 'Hello'),
+              TextSpan(text: 'Helllo'),
               TextSpan(
                   text: 'World',
                   style: TextStyle(

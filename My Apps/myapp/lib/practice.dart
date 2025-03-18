@@ -1,6 +1,5 @@
-import 'dart:collection';
-
 import 'package:flutter/material.dart';
+import 'widgets/rounded_btn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,15 +8,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Flutter App',
       debugShowCheckedModeBanner: false,
+      title: 'My Flutter App',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Home'),
+      home: const MyHomePage(title: 'Home Page'),
     );
   }
 }
@@ -35,140 +36,18 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Contact List', style: TextStyle(color: Colors.white)),
-        backgroundColor: const Color.fromARGB(255, 168, 110, 255),
-      ),
-      body: const Column(
-        children: [
-          CatItems(),
-          Expanded(child: Contact()),
-          CatItems(),
-        ],
-      ),
-    );
-  }
-}
-
-class CatItems extends StatelessWidget {
-  const CatItems({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    var arrPfp = [
-      'assets/images/icons/user-regular.png',
-      'assets/images/icons/user-tie-solid.png',
-      'assets/images/icons/user-shield-solid.png',
-      'assets/images/icons/user-pen-solid.png',
-      'assets/images/icons/user-nurse-solid.png',
-      'assets/images/icons/user-ninja-solid.png',
-      'assets/images/icons/user-lock-solid.png',
-      'assets/images/icons/user-graduate-solid.png',
-      'assets/images/icons/user-gear-solid.png',
-      'assets/images/icons/user-solid.png',
-    ];
-    return Container(
-      height: 100,
-      color: const Color.fromARGB(255, 204, 170, 255),
-      child: ListView.builder(
-        itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.all(16),
-          child: SizedBox(
-            width: 80,
-            child: CircleAvatar(
-              child: Container(
-                width: 20,
-                height: 20,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage(arrPfp[index]),
-                  ),
-                ),
-              ),
-            ),
-          ),
+        appBar: AppBar(
+          title: const Text('Home Page', style: TextStyle(color: Colors.white)),
+          backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         ),
-        itemCount: arrPfp.length,
-        scrollDirection: Axis.horizontal,
-      ),
-    );
-  }
-}
-
-class Contact extends StatelessWidget {
-  const Contact({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    var arrPfp = [
-      'assets/images/icons/user-regular.png',
-      'assets/images/icons/user-tie-solid.png',
-      'assets/images/icons/user-shield-solid.png',
-      'assets/images/icons/user-pen-solid.png',
-      'assets/images/icons/user-nurse-solid.png',
-      'assets/images/icons/user-ninja-solid.png',
-      'assets/images/icons/user-lock-solid.png',
-      'assets/images/icons/user-graduate-solid.png',
-      'assets/images/icons/user-gear-solid.png',
-      'assets/images/icons/user-solid.png',
-    ];
-    var arrNames = [
-      'Abhinav',
-      'Abhishek',
-      'Aditya',
-      'Aman',
-      'Abhay',
-      'Ashish',
-      'Abhinandan',
-      'Shresth',
-      'Rudra',
-      'Souptik',
-    ];
-
-    var arrJobs = [
-      'Photographer',
-      'Engineer',
-      'Doctor',
-      'SalesMan',
-      'Graphic Designer',
-      'Programmer',
-      'Musician ',
-      'Web Developer',
-      'Android Developer',
-      'Gamer',
-    ];
-    return Container(
-      color: const Color.fromARGB(255, 255, 255, 255),
-      child: ListView.builder(
-        itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: ListTile(
-            leading: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text('${index + 1}.  '),
-                CircleAvatar(
-                  child: Container(
-                    width: 20,
-                    height: 20,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: AssetImage(arrPfp[index]),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            title: Text(arrNames[index]),
-            subtitle: Text(arrJobs[index]),
-            trailing: const Icon(Icons.add),
-          ),
-        ),
-        itemCount: arrNames.length,
-      ),
-    );
+        body: RichText(text: const TextSpan(
+          style: TextStyle (color: Colors.red, fontSize:11),
+          children: <TextSpan> [TextSpan(text:'Hello'), TextSpan(text: 'Hello 2', style: TextStyle(fontSize:12,fontWeight: FontWeight.bold, color: Colors.green,))]
+        ))
+        
+        
+        
+        
+        );
   }
 }

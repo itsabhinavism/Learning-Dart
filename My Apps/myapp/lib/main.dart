@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/rounded_btn.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,7 +8,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -36,27 +36,19 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+        /**appBar: AppBar(
           title: const Text('Home Page', style: TextStyle(color: Colors.white)),
           backgroundColor: const Color.fromARGB(255, 255, 0, 0),
-        ),
-        body: RichText/*default textstyle*/(
-            text: const TextSpan(
-                style: TextStyle(color: Colors.red, fontSize: 11),
-                children: <TextSpan>[
-              TextSpan(text: 'Hello'),
-              TextSpan(
-                  text: 'World',
-                  style: TextStyle(
-                      fontSize: 34,
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold)),
-              TextSpan(
-                  text: 'Welcome to Flutter',
-                  style: TextStyle(
-                      fontSize: 45,
-                      color: Color.fromARGB(255, 22, 198, 75),
-                      fontWeight: FontWeight.bold))
+        ),**/
+        body: Container(
+            width: 300,
+            height: double.infinity, color:Colors.grey,
+            child: Stack(children: [
+              Positioned(
+                  bottom: 41,
+                  right: 41,
+                  child:
+                      Container(width: 100, height: 100, color: Colors.white))
             ])));
   }
 }
