@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
             color: const Color.fromARGB(255, 121, 184, 236),
             child: Center(
                 child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(200.0),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
