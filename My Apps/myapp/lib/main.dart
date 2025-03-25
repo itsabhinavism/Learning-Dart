@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               keyboardType: TextInputType.number,
                               controller: no2Controller),
                           Padding(
-                              padding: const EdgeInsets.all(21.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         child: Text('Div')),
                                   ])),
                           Padding(
-                            padding: const EdgeInsets.all(21.0),
+                            padding: const EdgeInsets.all(11.0),
                             child: Text(
                               result,
                               style: TextStyle(fontSize: 25),
