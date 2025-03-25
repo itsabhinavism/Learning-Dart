@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/IntroPage.dart';
+import 'package:myapp/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 21, 247, 255)),
         useMaterial3: true,
       ),
-      home: IntroPage(),
+      home: SplashScreen(),
     );
   }
 }
