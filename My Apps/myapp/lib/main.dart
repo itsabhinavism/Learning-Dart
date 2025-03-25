@@ -1,57 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/IntroPage.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'My Flutter App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 21, 247, 255)),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Home Page'),
+      home: IntroPage(),debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  var no1Controller = TextEditingController();
-  var no2Controller = TextEditingController();
-  var result = "";
-
+class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Home Page'),
-          backgroundColor: const Color.fromARGB(255, 191, 154, 255),
-        ),
-        body: ConstrainedBox(
-            constraints: BoxConstraints(
-              
-              maxWidth: 90,
-            
-              maxHeight: 90,
-            ),
-            child:
-            ElevatedButton(onPressed: () {}, child: Text('Clicrld vv vHello WorldHello WorldHello WorldHello WorldHello WorldHello World vv vHello WorldHello WorldHello WorldHello WorldHello WorldHello Wok', overflow: TextOverflow.fade)
-            )));
+      appBar: AppBar(
+        title: const Text('Home Page'),
+        backgroundColor: const Color.fromARGB(255, 191, 154, 255),
+      ),
+      body: Center(
+        child: Text('Hello world'),
+      ),
+    );
   }
 }
