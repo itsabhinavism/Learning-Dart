@@ -1,0 +1,19 @@
+
+flutter_native_splash:
+  color: "#ffffff"  # Background color (white)
+  android: true
+  ios: true
+
+  # Add these "welcome" text configurations
+  android_12:
+    color: "#ffffff"
+    branding: "Welcome to Flutter"
+    branding_font_size: 300
+    branding_color: "#42a5f5"  # Text color (blue)
+    branding_offset:500  # Distance from bottom
+
+  ios:
+    branding: "Welcome to Flutter"
+    branding_font_size: 300
+    branding_color: "#42a5f5"  # Text color (blue)
+    branding_offset: 500  # Distance from bottom
