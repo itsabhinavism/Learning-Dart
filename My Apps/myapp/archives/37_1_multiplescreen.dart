@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/**import 'package:flutter/material.dart';
 import 'package:myapp/IntroPage.dart';
 
 void main() {
@@ -123,3 +123,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+**/
