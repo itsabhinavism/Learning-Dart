@@ -1,10 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:provider/provider.dart';
+
+class CounterProvider extends ChangeNotifier {
+  int _count = 0;
+
+  int get count => _count;
+
+  void increment() {
+    _count++;
+    notifyListeners();
+  }
+
+  void decrement() {
+    _count--;
+    notifyListeners();
+  }
+
+  void reset() {
+    _count = 0;
+    notifyListeners();
+  }
+}
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  Future.delayed(Duration(seconds: 1), () {
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CounterProvider(),
+      child: const MyApp(),
+    ),
+  );
+
+  // Remove splash screen after delay
+  Future.delayed(const Duration(seconds: 1), () {
     FlutterNativeSplash.remove();
   });
 }
@@ -36,12 +67,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _count = 0;
-
   void _incrementCount() {
-    setState(() {
-      _count++;
-    });
+    Provider.of<CounterProvider>(context, listen: false).increment();
+  }
+
+  void _decrementCount() {
+    Provider.of<CounterProvider>(context, listen: false).decrement();
+  }
+
+  void _resetCount() {
+    Provider.of<CounterProvider>(context, listen: false).reset();
   }
 
   @override
@@ -52,14 +87,33 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(
-          '$_count',
-          style: const TextStyle(fontSize: 25),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '${Provider.of<CounterProvider>(context).count}',
+              style: const TextStyle(fontSize: 25),
+            ),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: _decrementCount,
+                  child: const Text('-'),
+                ),
+                ElevatedButton(
+                  onPressed: _resetCount,
+                  child: const Text('Start'),
+                ),
+                ElevatedButton(
+                  onPressed: _incrementCount,
+                  child: const Text('+'),
+                ),
+              ],
+            ),
+          ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCount,
-        child: const Icon(Icons.add),
       ),
     );
   }
