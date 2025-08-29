@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 ElevatedButton(
                   onPressed: _resetCount,
-                  child: const Text('Start'),
+                  child: const Text('RESET'),
                 ),
                 ElevatedButton(
                   onPressed: _incrementCount,
