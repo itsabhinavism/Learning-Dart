@@ -49,14 +49,13 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Home'),
       ),
-      body: Center(child: Consumer<CounterProvider>(builder: (ctx, _, __) {
-        print("Consumer Build Function called!!");
-        return Text(
+      body: Center(
+        child: Text(
           //string
           '${Provider.of<CounterProvider>(context, listen: true).getCount()}',
           style: const TextStyle(fontSize: 25),
-        );
-      })),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Provider.of<CounterProvider>(context, listen: false).incrementCount();
