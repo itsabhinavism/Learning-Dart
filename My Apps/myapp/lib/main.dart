@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
+import 'counter_provider.dart';
 
+/*
 class CounterProvider extends ChangeNotifier {
   int _count = 0;
 
@@ -22,6 +24,7 @@ class CounterProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+*/
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -46,74 +49,38 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: ChangeNotifierProvider(
+          create: (_) => CounterProvider(),
+          child: MyHomePage(),
+        ));
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  void _incrementCount() {
-    Provider.of<CounterProvider>(context, listen: false).increment();
-  }
-
-  void _decrementCount() {
-    Provider.of<CounterProvider>(context, listen: false).decrement();
-  }
-
-  void _resetCount() {
-    Provider.of<CounterProvider>(context, listen: false).reset();
-  }
-
+class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text('Home'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              '${Provider.of<CounterProvider>(context).count}',
-              style: const TextStyle(fontSize: 25),
-            ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton(
-                  onPressed: _decrementCount,
-                  child: const Text('-'),
-                ),
-                ElevatedButton(
-                  onPressed: _resetCount,
-                  child: const Text('RESET'),
-                ),
-                ElevatedButton(
-                  onPressed: _incrementCount,
-                  child: const Text('+'),
-                ),
-              ],
-            ),
-          ],
+        child: Text(
+          '${Provider.of<CounterProvider>(context, listen: true).getCount()}',
+          style: const TextStyle(fontSize: 25),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Provider.of<CounterProvider>(context, listen: false).incrementCount();
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
