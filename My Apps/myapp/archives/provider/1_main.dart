@@ -49,16 +49,19 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Home'),
       ),
-      body: Center(
-        child: Text(
+      body: Center(child: Consumer<CounterProvider>(builder: (ctx, _, __) {
+        print("Consumer Build Function called!!");
+        return Text(
           //string
-          '${Provider.of<CounterProvider>(context, listen: true).getCount()}',
+          //'${Provider.of<CounterProvider>(ctx, listen: true).getCount()}',
+          '${ctx.watch<CounterProvider>().getCount()}',
           style: const TextStyle(fontSize: 25),
-        ),
-      ),
+        );
+      })),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Provider.of<CounterProvider>(context, listen: false).incrementCount();
+          //Provider.of<CounterProvider>(context, listen: false).incrementCount();
+          context.read<CounterProvider>().incrementCount();
         },
         child: const Icon(Icons.add),
       ),
