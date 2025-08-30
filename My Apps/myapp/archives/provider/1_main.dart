@@ -58,13 +58,23 @@ class MyHomePage extends StatelessWidget {
           style: const TextStyle(fontSize: 25),
         );
       })),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          //Provider.of<CounterProvider>(context, listen: false).incrementCount();
-          context.read<CounterProvider>().incrementCount();
-        },
-        child: const Icon(Icons.add),
-      ),
+      floatingActionButton:
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+        FloatingActionButton(
+          onPressed: () {
+            //Provider.of<CounterProvider>(context, listen: false).incrementCount();
+            context.read<CounterProvider>().decrementCount();
+          },
+          child: const Icon(Icons.remove),
+        ),
+        FloatingActionButton(
+          onPressed: () {
+            //Provider.of<CounterProvider>(context, listen: false).incrementCount();
+            context.read<CounterProvider>().incrementCount(5);
+          },
+          child: const Icon(Icons.add),
+        )
+      ]),
     );
   }
 }

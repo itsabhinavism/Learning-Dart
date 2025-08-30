@@ -4,20 +4,22 @@ import 'package:provider/provider.dart';
 import 'counter_provider.dart';
 import 'list_map_provider.dart';
 import 'list_page.dart';
-//import 'add_data_page.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(
-      create: (context) => ListMapProvider(),
-    ),
+  runApp(
     ChangeNotifierProvider(
       create: (context) => CounterProvider(),
+      child: const MyApp(),
     ),
-  ], child: const MyApp()));
+  );
+
+  // Remove splash screen after delay
+  Future.delayed(const Duration(seconds: 1), () {
+    FlutterNativeSplash.remove();
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -25,20 +27,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Remove splash screen after delay
-    Future.delayed(const Duration(seconds: 1), () {
-      FlutterNativeSplash.remove();
-    });
-
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: ListPage(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: MultiProvider(
+          providers: [
+            ChangeNotifierProvider(
+              create: (context) => ListMapProvider(),
+            ),
+            ChangeNotifierProvider(
+              create: (context) => CounterProvider(),
+            ),
+          ],
+          child: ListPage(),
+        ));
   }
 }
 
@@ -62,7 +68,7 @@ class MyHomePage extends StatelessWidget {
         );
       })),
       floatingActionButton:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
         FloatingActionButton(
           onPressed: () {
             //Provider.of<CounterProvider>(context, listen: false).incrementCount();
