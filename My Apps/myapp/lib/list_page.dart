@@ -55,7 +55,7 @@ class ListPage extends StatelessWidget {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => AddDataPage()));
         },
-        child: Icon(Icons.add),
+        child: Icon(Icons.arrow_back_ios_rounded),
       ),
     );
   }
